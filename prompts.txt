@@ -1,0 +1,14 @@
+Write a new class witin the import_ directory called SplitHTML in split_html.py. 
+The class should have two methods as per clean_html.py
+  - __init__
+  - execute
+The html should be split by
+  - Finding each section by section heading 
+  - Section headings consist of the section number separated by '.' and header text
+  - Section headings will be in html 'h' tags
+The result should be an array of dicts
+  - Each array entry dict should consist of
+      - The section number
+      - The section title text
+      - the html contents of the section
+Test on the html files in the protocols directory in an xxx_section.py file, saving the results in yaml files in protocols/sections

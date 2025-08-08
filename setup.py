@@ -14,6 +14,9 @@ setup(
     package_dir={"": "src"},
     install_requires=[
         "usdm4>=0.8.2",
+        "docling==2.43.0",
+        "anthropic==0.62.0",
+        "d4k-ms-base==0.3.0"
     ],
     author="D Iberson-Hurst",
     author_email="",

@@ -13,8 +13,7 @@ class LegacyImport:
         self._encoder = usdm4.encoder(self._builder, errors)
 
     def process(self) -> None:
-        processor = ToHTML(self._file_path)
-        print("PROCESS")
+        processor = ToHTML(self._file_path, self._errors)
         self._doc = processor.execute()
 
     def to_usdm(self) -> str | None:

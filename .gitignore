@@ -208,6 +208,7 @@ __marimo__/
 
 # Protocol dir
 /protocols/*.*
+/protocols/*
 
 # Python test programs
 xxx_*.*
@@ -218,3 +219,6 @@ xxx_*.*
 # Environment files
 .development_env
 .test_env
+
+# Shell scripts
+all.sh
