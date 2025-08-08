@@ -45,6 +45,29 @@ class SplitHTML:
             # Find all heading tags
             headings = self._soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
             
+            # Find the first numbered section heading
+            first_numbered_heading = None
+            first_numbered_index = -1
+            
+            for i, heading in enumerate(headings):
+                section_info = self._parse_section_heading(heading)
+                if section_info:
+                    first_numbered_heading = heading
+                    first_numbered_index = i
+                    break
+            
+            # If there's content before the first numbered section, capture it
+            if first_numbered_heading:
+                pre_section_content = self._get_pre_section_content(first_numbered_heading)
+                if pre_section_content.strip():
+                    pre_section_dict = {
+                        'section_number': '0',
+                        'section_title': 'Pre-Section Content',
+                        'html_content': pre_section_content
+                    }
+                    sections.append(pre_section_dict)
+            
+            # Process numbered sections
             for i, heading in enumerate(headings):
                 section_info = self._parse_section_heading(heading)
                 
@@ -179,6 +202,71 @@ class SplitHTML:
             location = KlassMethodLocation(self.MODULE, "_get_section_content")
             self._errors.exception(
                 f"Exception raised while getting section content",
+                e,
+                location,
+            )
+            return ""
+
+    def _get_pre_section_content(self, first_numbered_heading) -> str:
+        """
+        Get the HTML content that appears before the first numbered section heading.
+        
+        Args:
+            first_numbered_heading: The first numbered section heading element
+            
+        Returns:
+            str: HTML content before the first numbered section
+        """
+        try:
+            content_elements = []
+            
+            # Start from the beginning of the body (or document)
+            body = self._soup.find('body')
+            if not body:
+                # If no body tag, start from the root
+                start_element = self._soup
+            else:
+                start_element = body
+            
+            # Collect all elements until we reach the first numbered heading
+            def collect_elements(element):
+                for child in element.children:
+                    if child == first_numbered_heading:
+                        return False  # Stop collecting
+                    
+                    if hasattr(child, 'name') and child.name:
+                        # If this is a heading, check if it's a numbered section
+                        if (child.name in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] and 
+                            self._parse_section_heading(child)):
+                            return False  # Stop if we hit another numbered section
+                        
+                        # If it contains the first numbered heading, recurse
+                        if first_numbered_heading in child.descendants:
+                            if not collect_elements(child):
+                                return False
+                        else:
+                            # Add this element if it doesn't contain the first numbered heading
+                            content_elements.append(str(child))
+                    elif hasattr(child, 'strip') and child.strip():
+                        # Include text nodes that have content
+                        content_elements.append(child.strip())
+                
+                return True
+            
+            collect_elements(start_element)
+            
+            # Combine all content elements
+            content = ''.join(content_elements)
+            
+            # Clean up the content
+            content = content.strip()
+            
+            return content
+            
+        except Exception as e:
+            location = KlassMethodLocation(self.MODULE, "_get_pre_section_content")
+            self._errors.exception(
+                f"Exception raised while getting pre-section content",
                 e,
                 location,
             )
