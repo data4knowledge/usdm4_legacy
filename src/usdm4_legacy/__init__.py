@@ -11,15 +11,19 @@ class USDM4Legacy:
         self._errors = Errors()
         self._import = None
 
-    async def from_pdf(self, filepath: str) -> str | None:
+    def from_pdf(self, filepath: str) -> str | None:
         try:
+            print("A")
             self._import = LegacyImport(filepath, self._errors)
+            print("B")
             self._import.process()
+            print("C")
             return self._import.to_usdm()
         except Exception as e:
-            location = KlassMethodLocation(self.MODULE, "from_docx")
+            print(f"E: {e}")
+            location = KlassMethodLocation(self.MODULE, "from_pdf")
             self._errors.exception(
-                f"Exception raised converting CPT '.docx' file '{filepath}'",
+                f"Exception raised converting legacy '.pdf' file '{filepath}'",
                 e,
                 location,
             )

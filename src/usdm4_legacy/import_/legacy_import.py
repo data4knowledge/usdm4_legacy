@@ -9,11 +9,12 @@ class LegacyImport:
         self._errors = errors
         self._doc = None
         usdm4 = USDM4()
-        self._builder = usdm4.builder(errors)
-        self._encoder = usdm4.encoder(errors)
+        self._builder = usdm4.builder_e(errors)
+        self._encoder = usdm4.encoder(self._builder, errors)
 
-    async def process(self) -> None:
+    def process(self) -> None:
         processor = ToHTML(self._file_path)
+        print("PROCESS")
         self._doc = processor.execute()
 
     def to_usdm(self) -> str | None:
