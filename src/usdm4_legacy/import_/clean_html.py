@@ -11,7 +11,7 @@ class CleanHTML:
         self._errors = errors
         self._soup = None
 
-    def execute(self) -> str | None:
+    def process(self) -> str | None:
         try:
             self._soup: BeautifulSoup = self._get_soup(self._html)
             self._extract_toc()

@@ -2,21 +2,31 @@
 from simple_error_log.errors import Errors
 from usdm4 import USDM4
 from usdm4_legacy.import_.to_html import ToHTML
+from usdm4_legacy.import_.clean_html import CleanHTML
+from usdm4_legacy.import_.split_html import SplitHTML
+from usdm4_legacy.import_.title_page import TitlePage
 
 class LegacyImport:
     def __init__(self, file_path: str, errors: Errors):
         self._file_path = file_path
         self._errors = errors
-        self._doc = None
+        self._html = None
+        self._sections = []
         usdm4 = USDM4()
-        self._builder = usdm4.builder_e(errors)
-        self._encoder = usdm4.encoder(self._builder, errors)
+        self._assembler = usdm4.assembler(errors)
 
     def process(self) -> None:
         processor = ToHTML(self._file_path, self._errors)
-        self._doc = processor.execute()
+        self._html = processor.process()
+        cleaner = CleanHTML(self._html, self._errors)
+        self._html = cleaner.process()
+        splitter = SplitHTML(self._html, self._errors)
+        self._sections = splitter.process()
+        print(f"SECTIONS: {self._sections[0:1]}")
 
     def to_usdm(self) -> str | None:
+        title_page = TitlePage(self._sections, self._errors)
+        title_page.process()
         # usdm = ToUSDM(
         #     self._builder,
         #     self._errors,

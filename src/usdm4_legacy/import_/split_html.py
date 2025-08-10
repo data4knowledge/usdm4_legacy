@@ -13,7 +13,7 @@ class SplitHTML:
         self._errors = errors
         self._soup = None
 
-    def execute(self) -> list[dict] | None:
+    def process(self) -> list[dict] | None:
         """
         Split HTML document into sections based on section headings.
         
@@ -61,8 +61,8 @@ class SplitHTML:
                 pre_section_content = self._get_pre_section_content(first_numbered_heading)
                 if pre_section_content.strip():
                     pre_section_dict = {
-                        'section_number': '0',
-                        'section_title': 'Pre-Section Content',
+                        'section_number': '',
+                        'section_title': '',
                         'html_content': pre_section_content
                     }
                     sections.append(pre_section_dict)

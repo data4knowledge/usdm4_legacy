@@ -10,7 +10,7 @@ class ToHTML:
         self._full_path = full_path
         self._errors = errors
 
-    def execute(self):
+    def process(self):
         try:
             result = self._converter.convert(self._full_path)
             return result.document.export_to_html()
