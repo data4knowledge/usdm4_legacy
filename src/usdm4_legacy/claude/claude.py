@@ -1,3 +1,4 @@
+import json
 from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
 from anthropic import Anthropic
@@ -10,6 +11,7 @@ class Claude:
 
     def __init__(self, errors: Errors):
         api_key = ServiceEnvironment().get("ANTHROPIC_API_KEY")
+        self._errors = errors
         self._client = None
         if not api_key:
             location = KlassMethodLocation(self.MODULE, "__init__")
@@ -30,18 +32,36 @@ class Claude:
         )
         return message.content[0].text
 
-    def system_prompt(self, content: str, system: str) -> str:
-        message = self._client.messages.create(
-            model=self.CLAUDE_MODEL,
-            max_tokens=1024,
-            temperature=0,
-            system=system,
-            messages=[
-                {"role": "user",
-                "content": content}
-            ]
-        )
-        return message
+    def extract_json(self, text: str) -> dict:
+        result = text.replace("\n", "")
+        s_index = result.find("{")
+        e_index = result.rfind("}")
+        if s_index >= 0 and e_index >= 0 and e_index > s_index:
+            result = result[s_index : e_index + 1]
+            try:
+                print(f"RESULT: {result}")
+                return json.loads(result)
+            except Exception as e:
+                location = KlassMethodLocation(self.MODULE, "extract_json")
+                self._errors.exception(f"Error decoding Claude JSON", e, location)
+                return None
+        else:
+            location = KlassMethodLocation(self.MODULE, "extract_json")
+            self._errors.error(f"Error decoding Claude response", location)
+            return None
+
+    # def system_prompt(self, content: str, system: str) -> str:
+    #     message = self._client.messages.create(
+    #         model=self.CLAUDE_MODEL,
+    #         max_tokens=1024,
+    #         temperature=0,
+    #         system=system,
+    #         messages=[
+    #             {"role": "user",
+    #             "content": content}
+    #         ]
+    #     )
+    #     return message
 
     # def process_streamed_response(self, stream, protocol_id, table_id="table-001"):
     #     full_response = ""

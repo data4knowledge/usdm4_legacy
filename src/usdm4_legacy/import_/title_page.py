@@ -18,35 +18,51 @@ class TitlePage():
             else:
                 text += self._sections[index]['html_content']
             index += 1
+            if index > 10:
+                break
         prompt = f"""
             from the html below
 
             {text}
 
-            Extract the following informatio into a JSON structure , please extract the following information:
-            - The title of the clinical trial protocol document
-                - PLace into the field "official"
-            - The trial phase
-                - Place into the field "phase"
-            - The NCT number allocated to the study. 
-                - The NCT number takes for the format "NCT" followed by 8 digits. 
-                - Place into a "ct.gov" field
-            - The sponsor's company name 
-                - Place into the field "sponsor"
-            - The sponsor's study or trial identifier
-                - placed into a field "sponsor_identifier"
-            - The sponsor's address
-                - The address should be split into several fields
-                    - The city placed into a "city" field
-                    - the zip or postal code placed into a "postalCode" field 
-                    - The state or region placed into a "state" field
-                    - The country returned in a "country" field as a ISO 3166 country code
-                    - Any other infomration returned as lines as an array in a "lines" field
-            If no results can be found return an empty JSON structure.
+            Extract the following informatio into a JSON structure struyctured as follows:
+            - Several top levels sections:
+                - a section called "titles":
+                    - The title of the clinical trial protocol document, placed into the field "official"
+                    - The acronym for the study, placed into the field "acronym"
+                    - The brief title of the study, placed into the field "brief"
+                
+                - a section called "ct.gov"
+                    - The NCT number allocated to the study. 
+                    - The NCT number takes for the format "NCT" followed by 8 digits. 
+                    - Place into a field called "identifier"
+
+                - a section called "fda"
+                    - The IND number allocated to the study. 
+                    - IND is the acronym for Investigational New Drug  
+                    - Place into a field called "identifier"
+                    
+                - a section called "sponsor":
+                    - The sponsor's company name 
+                        - Place into the field "sponsor"
+                    - The sponsor's study or trial identifier
+                        - placed into a field "sponsor_identifier"
+                    - The sponsor's address placed into field "legalAddress"
+                        - The address should be split into several fields
+                            - The city placed into a "city" field
+                            - the zip or postal code placed into a "postalCode" field 
+                            - The state or region placed into a "state" field
+                            - The country returned in a "country" field as a ISO 3166 country code
+                            - Any other data returned as lines as an array in a "lines" field
+
+                - a section called "other":
+                    - The trial phase placed into the field "phase"
+
+                If no results can be found return an empty JSON structure.
             """
         prompt_result = self._ai.prompt(prompt)
         print(f"TRIAL INFO: {prompt_result}")
-        # result = self._extract_result(prompt_result)
-        # print(f"TRIAL INFO RESULT: {result}")
-        # return result
+        result = self._ai.extract_json(prompt_result)
+        print(f"TRIAL INFO RESULT: {result}")
+        return result
                 

@@ -22,7 +22,6 @@ class LegacyImport:
         self._html = cleaner.process()
         splitter = SplitHTML(self._html, self._errors)
         self._sections = splitter.process()
-        print(f"SECTIONS: {self._sections[0:1]}")
 
     def to_usdm(self) -> str | None:
         title_page = TitlePage(self._sections, self._errors)

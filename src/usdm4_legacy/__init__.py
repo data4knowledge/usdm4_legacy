@@ -13,14 +13,10 @@ class USDM4Legacy:
 
     def from_pdf(self, filepath: str) -> str | None:
         try:
-            print("A")
             self._import = LegacyImport(filepath, self._errors)
-            print("B")
             self._import.process()
-            print("C")
             return self._import.to_usdm()
         except Exception as e:
-            print(f"E: {e}")
             location = KlassMethodLocation(self.MODULE, "from_pdf")
             self._errors.exception(
                 f"Exception raised converting legacy '.pdf' file '{filepath}'",
