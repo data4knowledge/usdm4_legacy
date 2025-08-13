@@ -3,6 +3,8 @@ from simple_error_log.error_location import KlassMethodLocation
 from usdm4_legacy.claude.claude import Claude
 
 class TitlePage():
+    MODULE = "usdm4_legacy.import_.extract.title_page.TitlePage"
+
     def __init__(self, sections: list[str], errors: Errors):
         self._sections = sections
         self._errors = errors
@@ -16,7 +18,7 @@ class TitlePage():
             if self._sections[index]['section_number'] != "":
                 not_numbered = False
             else:
-                text += self._sections[index]['html_content']
+                text += self._sections[index]['text']
             index += 1
             if index > 10:
                 break

@@ -11,7 +11,7 @@ class USDM4Legacy:
         self._errors = Errors()
         self._import = None
 
-    def from_pdf(self, filepath: str) -> str | None:
+    def from_pdf(self, filepath: str) -> Wrapper | None:
         try:
             self._import = LegacyImport(filepath, self._errors)
             return self._import.process()

@@ -13,7 +13,7 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
-        "usdm4>=0.8.2",
+        "usdm4>=0.9.0",
         "docling==2.43.0",
         "anthropic==0.62.0",
         "d4k-ms-base==0.3.0"

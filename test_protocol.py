@@ -35,5 +35,5 @@ if __name__ == '__main__':
     print("")
     legacy = USDM4Legacy()
     legacy.from_pdf(full_input_filename)
-    print(f"Errors: {legacy.errors.dump(0)}")
-    save_html(full_output_filename, legacy._import._html)
+    print(f"Errors: {legacy.errors.count()}, {legacy.errors.error_count()}")
+    #save_html(full_output_filename, legacy._import._html)

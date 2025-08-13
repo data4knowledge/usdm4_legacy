@@ -21,7 +21,7 @@ class SplitHTML:
             list[dict]: Array of dictionaries, each containing:
                 - section_number: The section number (e.g., "1", "1.1", "1.2.3")
                 - section_title: The section title text
-                - html_content: The HTML content of the section
+                - text: The HTML content of the section
         """
         try:
             self._soup: BeautifulSoup = self._get_soup(self._html)
@@ -63,7 +63,7 @@ class SplitHTML:
                     pre_section_dict = {
                         'section_number': '',
                         'section_title': '',
-                        'html_content': pre_section_content
+                        'text': pre_section_content
                     }
                     sections.append(pre_section_dict)
             
@@ -78,7 +78,7 @@ class SplitHTML:
                     section_dict = {
                         'section_number': section_info['number'],
                         'section_title': section_info['title'],
-                        'html_content': content
+                        'text': content
                     }
                     
                     sections.append(section_dict)
