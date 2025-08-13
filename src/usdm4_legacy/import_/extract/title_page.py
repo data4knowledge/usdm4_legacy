@@ -60,6 +60,7 @@ class TitlePage():
                 - a section called "other":
                     - The trial phase placed into the field "phase"
                     - The document approval date placed into the field "approval_date" in ISO 8601 YYYY-MM-DD format
+                    - The document version, normall an integer, placed into a field "document_version"
 
                 If no results can be found return an empty JSON structure.
             """

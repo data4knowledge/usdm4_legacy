@@ -21,7 +21,7 @@ class ExtractStudy():
                     "version": "", # @todo
                     "status": "Final", # @todo
                     "template": "Legacy",
-                    "version_date": tp_result["approval_date"],
+                    "version_date": tp_result["other"]["approval_date"],
                 },
                 "sections": self._sections
             }
@@ -34,7 +34,11 @@ class ExtractStudy():
                 "label": "Default population"
             }
             result["study"] = {
-                "approval_date": tp_result["approval_date"]
+                "approval_date": tp_result["other"]["approval_date"],
+                "version": "1", # @todo
+                "rationale": "Not set", # @todo
+                "name": "STUDY", # @todo
+                "label": "STUDY", # @todo
             }
             return result
         except Exception as e:
