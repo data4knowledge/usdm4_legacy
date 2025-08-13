@@ -3,7 +3,7 @@ from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
 
 class ToHTML:
-    MODULE = "usdm4_legacy.import_.to_html.ToHTML"
+    MODULE = "usdm4_legacy.import_.load.to_html.ToHTML"
 
     def __init__(self, full_path: str, errors: Errors):
         self._converter = DocumentConverter()

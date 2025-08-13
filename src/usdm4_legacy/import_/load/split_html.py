@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 
 class SplitHTML:
-    MODULE = "usdm4_legacy.import_.split_html.SplitHTML"
+    MODULE = "usdm4_legacy.import_.load.split_html.SplitHTML"
 
     def __init__(self, html: str, errors: Errors):
         self._html = html

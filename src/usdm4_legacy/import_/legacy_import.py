@@ -1,10 +1,9 @@
 # from usdm4.api.wrapper import Wrapper
 from simple_error_log.errors import Errors
 from usdm4 import USDM4
-from usdm4_legacy.import_.to_html import ToHTML
-from usdm4_legacy.import_.clean_html import CleanHTML
-from usdm4_legacy.import_.split_html import SplitHTML
-from usdm4_legacy.import_.title_page import TitlePage
+from usdm4_legacy.import_.load import LoadPDF
+from usdm4_legacy.import_.extract import ExtractStudy
+from usdm4_legacy.import_.assemble import AssembleUSDM
 
 class LegacyImport:
     def __init__(self, file_path: str, errors: Errors):
@@ -16,28 +15,12 @@ class LegacyImport:
         self._assembler = usdm4.assembler(errors)
 
     def process(self) -> None:
-        processor = ToHTML(self._file_path, self._errors)
-        self._html = processor.process()
-        cleaner = CleanHTML(self._html, self._errors)
-        self._html = cleaner.process()
-        splitter = SplitHTML(self._html, self._errors)
-        self._sections = splitter.process()
-
-    def to_usdm(self) -> str | None:
-        title_page = TitlePage(self._sections, self._errors)
-        title_page.process()
-        # usdm = ToUSDM(
-        #     self._builder,
-        #     self._errors,
-        #     self._title_page,
-        #     # self._inclusion_exclusion,
-        #     # self._estimands,
-        #     # self._amendment,
-        #     self._sections,
-        # )
-        # usdm = usdm.export()
-        # return usdm
-        return ""
+        loader = LoadPDF(self._file_path, self._errors)
+        self._sections = loader.process()
+        extractor = ExtractStudy(self._sections, self._errors)
+        self._study = extractor.process()
+        assembler = AssembleUSDM(self._study, self._errors)
+        return assembler.process()
 
     def extra(self):
         return {

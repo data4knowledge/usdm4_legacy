@@ -5,7 +5,7 @@ Test script for the HTML section splitting functionality using SplitHTML class.
 
 import os
 import yaml
-from src.usdm4_legacy.import_.split_html import SplitHTML
+from usdm4_legacy.import_.load.split_html import SplitHTML
 from simple_error_log.errors import Errors
 
 def load_html_file(filename):

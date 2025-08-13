@@ -25,7 +25,7 @@ class TitlePage():
 
             {text}
 
-            Extract the following informatio into a JSON structure struyctured as follows:
+            Extract the following information into a JSON structure using the structure detailed below:
             - Several top levels sections:
                 - a section called "titles":
                     - The title of the clinical trial protocol document, placed into the field "official"
@@ -44,9 +44,9 @@ class TitlePage():
                     
                 - a section called "sponsor":
                     - The sponsor's company name 
-                        - Place into the field "sponsor"
+                        - Place into the field "label"
                     - The sponsor's study or trial identifier
-                        - placed into a field "sponsor_identifier"
+                        - placed into a field "identifier"
                     - The sponsor's address placed into field "legalAddress"
                         - The address should be split into several fields
                             - The city placed into a "city" field
@@ -61,7 +61,6 @@ class TitlePage():
                 If no results can be found return an empty JSON structure.
             """
         prompt_result = self._ai.prompt(prompt)
-        print(f"TRIAL INFO: {prompt_result}")
         result = self._ai.extract_json(prompt_result)
         print(f"TRIAL INFO RESULT: {result}")
         return result

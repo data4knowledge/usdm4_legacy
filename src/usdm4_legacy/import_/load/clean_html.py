@@ -4,7 +4,7 @@ from simple_error_log.error_location import KlassMethodLocation
 from bs4 import BeautifulSoup
 
 class CleanHTML:
-    MODULE = "usdm4_legacy.import_.clean_html.cleanHTML"
+    MODULE = "usdm4_legacy.import_.load.clean_html.cleanHTML"
 
     def __init__(self, html: str, errors: Errors):
         self._html = html

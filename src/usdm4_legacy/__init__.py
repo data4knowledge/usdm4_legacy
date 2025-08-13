@@ -14,8 +14,7 @@ class USDM4Legacy:
     def from_pdf(self, filepath: str) -> str | None:
         try:
             self._import = LegacyImport(filepath, self._errors)
-            self._import.process()
-            return self._import.to_usdm()
+            return self._import.process()
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "from_pdf")
             self._errors.exception(

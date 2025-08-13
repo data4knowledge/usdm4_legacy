@@ -4,7 +4,7 @@ Test script for the table of contents removal functionality using CleanHTML clas
 """
 
 import os
-from src.usdm4_legacy.import_.clean_html import CleanHTML
+from usdm4_legacy.import_.load.clean_html import CleanHTML
 from simple_error_log.errors import Errors
 
 def load_html_file(filename):
