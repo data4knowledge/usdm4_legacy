@@ -5,7 +5,6 @@ from usdm4_legacy.import_.load import LoadPDF
 from usdm4_legacy.import_.extract import ExtractStudy
 from usdm4_legacy.import_.assemble import AssembleUSDM
 from usdm4.api.wrapper import Wrapper
-from usdm4_legacy.__info__ import __model_version__ as usdm_version, __package_version__ as system_version
 
 
 class LegacyImport:
@@ -26,9 +25,9 @@ class LegacyImport:
             print(f"Loaded PDF")
             extractor = ExtractStudy(self._sections, self._errors)
             self._study = extractor.process()
-            print(f"Extracted content: {self._study}")
+            print(f"Extracted content")
             assembler = AssembleUSDM(self._study, self._errors)
-            wrapper = self._assembler.wrapper("USDM4 Legacy Protocol Package", system_version)
+            wrapper = assembler.process()
             print(f"Study built")
             return wrapper
         except Exception as e:

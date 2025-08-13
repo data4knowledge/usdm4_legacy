@@ -2,6 +2,7 @@ from usdm4_legacy.import_.legacy_import import LegacyImport
 from usdm4.api.wrapper import Wrapper
 from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
+from usdm4.api.wrapper import Wrapper
 
 
 class USDM4Legacy:
@@ -11,14 +12,14 @@ class USDM4Legacy:
         self._errors = Errors()
         self._import = None
 
-    def from_pdf(self, filepath: str) -> Wrapper | None:
+    def from_pdf(self, file_path: str) -> Wrapper | None:
         try:
-            self._import = LegacyImport(filepath, self._errors)
+            self._import = LegacyImport(file_path, self._errors)
             return self._import.process()
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "from_pdf")
             self._errors.exception(
-                f"Exception raised converting legacy '.pdf' file '{filepath}'",
+                f"Exception raised converting legacy '.pdf' file '{file_path}'",
                 e,
                 location,
             )

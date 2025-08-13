@@ -1,8 +1,12 @@
 from usdm4 import USDM4
-from usdm4.assembler.assembler import Assembler
 from simple_error_log.errors import Errors
+from simple_error_log.error_location import KlassMethodLocation
+from usdm4.assembler.assembler import Assembler
+from usdm4.api.wrapper import Wrapper
+from usdm4_legacy.__info__ import __package_version__ as system_version, __system_name__ as system_name
 
 class AssembleUSDM():
+    MODULE = "usdm4_legacy.import_.assemble/__init__.AssembleUSDM"
 
     def __init__(self, source_data: dict, errors: Errors):
         self._source_data = source_data
@@ -10,35 +14,16 @@ class AssembleUSDM():
         self._usdm4 = USDM4()
         self._assembler: Assembler = self._usdm4.assembler(self._errors)
 
-    def process(self) -> str:
-        usdm_data = {}
-        usdm_data['identification'] = self._identification()
-        return self._assembler.execute(usdm_data)
-
-    def _identification(self) -> dict:
-        tp = self._source_data["title_page"]
-        print(f"\n\nTP: {tp}\n\n")
-        result = {
-            "titles": tp['titles'],
-            "identifiers": []
-        }
-        for org in ["ct.gov", "fda"]:
-            if org in tp:
-                result['identifiers'].append({"identifier": tp[org]['identifier'],"scope": {"standard": org}}) 
-        if "sponsor" in tp:
-            result['identifiers'].append(
-                {
-                    "identifier": tp['sponsor']["identifier"],
-                    "scope": {
-                        "non_standard": {
-                            "type": "pharma",
-                            "name": tp['sponsor']["label"].upper().replace(" ", "-"),
-                            "description": "The sponsor organization",
-                            "label": tp['sponsor']["label"],
-                            "identifier": "UNKNOWN",
-                            "identifierScheme": "UNKNOWN",
-                            "legalAddress": tp['sponsor']["legalAddress"]
-                        }
-                    }
-                }
+    def process(self) -> Wrapper:
+        try:
+            self._assembler.execute(self._source_data)
+            return self._assembler.wrapper(system_name, system_version)
+        except Exception as e:
+            location = KlassMethodLocation(self.MODULE, "process")
+            self._errors.exception(
+                f"Exception raised assembling USDM",
+                e,
+                location,
             )
+            return {} 
+        

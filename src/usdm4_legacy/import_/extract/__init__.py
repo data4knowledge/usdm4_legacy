@@ -13,33 +13,73 @@ class ExtractStudy():
         try:
             result = {}
             title_page = TitlePage(self._sections, self._errors)
-            result["title_page"] = title_page.process()
-            result["document"] = {           
-                "label": "Protocol Document",
-                "version": "", # @todo
-                "status": "Final", # @todo
-                "template": "Legacy",
-                "version_date": "", # @todo
-            },
-            result["section"] = self._sections
+            tp_result = title_page.process()
+            result['identification'] = self._identification(tp_result)
+            result["document"] = { "document": 
+                {           
+                    "label": "Protocol Document",
+                    "version": "", # @todo
+                    "status": "Final", # @todo
+                    "template": "Legacy",
+                    "version_date": tp_result["approval_date"],
+                },
+                "sections": self._sections
+            }
             result["study_design"] = {
                 "label": "Study Design 1",
                 "rationale": "", # @todo
-                "trial_phase": result["title_page"]["other"]["phase"]
+                "trial_phase": tp_result["other"]["phase"]
             }
             result["population"] = {
                 "label": "Default population"
             }
             result["study"] = {
-                "sponsor_approval_date": "" # @todo
+                "approval_date": tp_result["approval_date"]
             }
             return result
         except Exception as e:
             print(f"Exception: {e}")
-            location = KlassMethodLocation(self.MODULE, "from_pdf")
+            location = KlassMethodLocation(self.MODULE, "process")
             self._errors.exception(
                 f"Exception raised extracting study data",
                 e,
                 location,
             )
             return None
+
+    def _identification(self, tp: dict) -> dict:
+        try:
+            print(f"\n\nTP: {tp}\n\n")
+            result = {
+                "titles": tp['titles'],
+                "identifiers": []
+            }
+            for org in ["ct.gov", "fda"]:
+                if org in tp:
+                    result['identifiers'].append({"identifier": tp[org]['identifier'],"scope": {"standard": org}}) 
+            if "sponsor" in tp:
+                result['identifiers'].append(
+                    {
+                        "identifier": tp['sponsor']["identifier"],
+                        "scope": {
+                            "non_standard": {
+                                "type": "pharma",
+                                "name": tp['sponsor']["label"].upper().replace(" ", "-"),
+                                "description": "The sponsor organization",
+                                "label": tp['sponsor']["label"],
+                                "identifier": "UNKNOWN",
+                                "identifierScheme": "UNKNOWN",
+                                "legalAddress": tp['sponsor']["legalAddress"]
+                            }
+                        }
+                    }
+                )
+            return result
+        except Exception as e:
+            location = KlassMethodLocation(self.MODULE, "_identification")
+            self._errors.exception(
+                f"Exception raised building identification data",
+                e,
+                location,
+            )
+            return {} 
