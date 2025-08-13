@@ -11,4 +11,23 @@ class ExtractStudy():
         result = {}
         title_page = TitlePage(self._sections, self._errors)
         result["title_page"] = title_page.process()
+        result["document"] = {           
+            "label": "Protocol Document",
+            "version": "", # @todo
+            "status": "Final", # @todo
+            "template": "Legacy",
+            "version_date": "", # @todo
+        },
+        result["section"] = self._sections
+        result["study_design"] = {
+            "label": "Study Design 1",
+            "rationale": "", # @todo
+            "trial_phase": result["title_page"]["other"]["phase"]
+        }
+        result["population"] = {
+            "label": "Default population"
+        }
+        result["study"] = {
+            "sponsor_approval_date": "" # @todo
+        }
         return result

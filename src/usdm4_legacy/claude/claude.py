@@ -39,7 +39,6 @@ class Claude:
         if s_index >= 0 and e_index >= 0 and e_index > s_index:
             result = result[s_index : e_index + 1]
             try:
-                print(f"RESULT: {result}")
                 return json.loads(result)
             except Exception as e:
                 location = KlassMethodLocation(self.MODULE, "extract_json")
