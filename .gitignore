@@ -212,7 +212,6 @@ __marimo__/
 
 # Python test programs
 xxx_*.*
-test_*.*
 
 # MacOS
 .DS_Store
