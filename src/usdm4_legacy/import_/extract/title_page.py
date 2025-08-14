@@ -2,7 +2,8 @@ from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
 from usdm4_legacy.claude.claude import Claude
 
-class TitlePage():
+
+class TitlePage:
     MODULE = "usdm4_legacy.import_.extract.title_page.TitlePage"
 
     def __init__(self, sections: list[str], errors: Errors):
@@ -15,10 +16,10 @@ class TitlePage():
         index = 0
         not_numbered = True
         while not_numbered:
-            if self._sections[index]['section_number'] != "":
+            if self._sections[index]["section_number"] != "":
                 not_numbered = False
             else:
-                text += self._sections[index]['text']
+                text += self._sections[index]["text"]
             index += 1
             if index > 10:
                 break
@@ -68,4 +69,3 @@ class TitlePage():
         result = self._ai.extract_json(prompt_result)
         print(f"TRIAL INFO RESULT: {result}")
         return result
-                

@@ -2,7 +2,8 @@ from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
 from usdm4_legacy.import_.extract.title_page import TitlePage
 
-class ExtractStudy():
+
+class ExtractStudy:
     MODULE = "usdm4_legacy.import_.extract.__init__.ExtractStudy"
 
     def __init__(self, sections: list[str], errors: Errors):
@@ -14,31 +15,29 @@ class ExtractStudy():
             result = {}
             title_page = TitlePage(self._sections, self._errors)
             tp_result = title_page.process()
-            result['identification'] = self._identification(tp_result)
-            result["document"] = { "document": 
-                {           
+            result["identification"] = self._identification(tp_result)
+            result["document"] = {
+                "document": {
                     "label": "Protocol Document",
-                    "version": "", # @todo
-                    "status": "Final", # @todo
+                    "version": "",  # @todo
+                    "status": "Final",  # @todo
                     "template": "Legacy",
                     "version_date": tp_result["other"]["approval_date"],
                 },
-                "sections": self._sections
+                "sections": self._sections,
             }
             result["study_design"] = {
                 "label": "Study Design 1",
-                "rationale": "", # @todo
-                "trial_phase": tp_result["other"]["phase"]
+                "rationale": "",  # @todo
+                "trial_phase": tp_result["other"]["phase"],
             }
-            result["population"] = {
-                "label": "Default population"
-            }
+            result["population"] = {"label": "Default population"}
             result["study"] = {
                 "approval_date": tp_result["other"]["approval_date"],
-                "version": "1", # @todo
-                "rationale": "Not set", # @todo
-                "name": "STUDY", # @todo
-                "label": "STUDY", # @todo
+                "version": "1",  # @todo
+                "rationale": "Not set",  # @todo
+                "name": "STUDY",  # @todo
+                "label": "STUDY",  # @todo
             }
             return result
         except Exception as e:
@@ -54,28 +53,32 @@ class ExtractStudy():
     def _identification(self, tp: dict) -> dict:
         try:
             print(f"\n\nTP: {tp}\n\n")
-            result = {
-                "titles": tp['titles'],
-                "identifiers": []
-            }
+            result = {"titles": tp["titles"], "identifiers": []}
             for org in ["ct.gov", "fda"]:
                 if org in tp:
-                    result['identifiers'].append({"identifier": tp[org]['identifier'],"scope": {"standard": org}}) 
+                    result["identifiers"].append(
+                        {
+                            "identifier": tp[org]["identifier"],
+                            "scope": {"standard": org},
+                        }
+                    )
             if "sponsor" in tp:
-                result['identifiers'].append(
+                result["identifiers"].append(
                     {
-                        "identifier": tp['sponsor']["identifier"],
+                        "identifier": tp["sponsor"]["identifier"],
                         "scope": {
                             "non_standard": {
                                 "type": "pharma",
-                                "name": tp['sponsor']["label"].upper().replace(" ", "-"),
+                                "name": tp["sponsor"]["label"]
+                                .upper()
+                                .replace(" ", "-"),
                                 "description": "The sponsor organization",
-                                "label": tp['sponsor']["label"],
+                                "label": tp["sponsor"]["label"],
                                 "identifier": "UNKNOWN",
                                 "identifierScheme": "UNKNOWN",
-                                "legalAddress": tp['sponsor']["legalAddress"]
+                                "legalAddress": tp["sponsor"]["legalAddress"],
                             }
-                        }
+                        },
                     }
                 )
             return result
@@ -86,4 +89,4 @@ class ExtractStudy():
                 e,
                 location,
             )
-            return {} 
+            return {}

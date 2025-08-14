@@ -4,6 +4,7 @@ from simple_error_log.error_location import KlassMethodLocation
 from anthropic import Anthropic
 from d4k_ms_base.service_environment import ServiceEnvironment
 
+
 class Claude:
     MODULE = "usdm4_legacy.claude.claude.Claude"
     CLAUDE_MODEL = "claude-sonnet-4-20250514"
@@ -70,31 +71,31 @@ class Claude:
     #         "output_tokens": 0,
     #         "completion_tokens": 0  # Will be set from response metadata
     #     }
-        
+
     #     try:
     #         application_logger.info(f"🔄 Receiving streamed response...")
     #         for chunk in stream:
     #             if hasattr(chunk, 'delta') and hasattr(chunk.delta, 'text'):
     #                 content = chunk.delta.text
     #                 full_response += content
-                    
+
     #                 # Show progress periodically
     #                 if len(full_response) - progress_marker > 1000:
     #                     application_logger.info(f"🔄 Received {len(full_response)} characters so far...")
     #                     progress_marker = len(full_response)
-                
+
     #             # Capture token usage when available
     #             if hasattr(chunk, 'usage'):
     #                 if hasattr(chunk.usage, 'input_tokens'):
     #                     token_stats['input_tokens'] = chunk.usage.input_tokens
     #                 if hasattr(chunk.usage, 'output_tokens'):
     #                     token_stats['output_tokens'] = chunk.usage.output_tokens
-        
+
     #     except Exception as e:
     #         application_logger.error(f"❌ Error processing stream: {str(e)}")
-        
+
     #     application_logger.info(f"✅ Stream complete, received {len(full_response)} characters total")
-        
+
     #     # Get final usage from the last message
     #     if hasattr(stream, 'usage'):
     #         if hasattr(stream.usage, 'input_tokens'):
@@ -103,7 +104,7 @@ class Claude:
     #             token_stats['output_tokens'] = stream.usage.output_tokens
     #         if hasattr(stream.usage, 'completion_tokens'):
     #             token_stats['completion_tokens'] = stream.usage.completion_tokens
-        
+
     #     return {
     #         "text": full_response,
     #         "token_stats": token_stats
@@ -120,7 +121,7 @@ class Claude:
     #     Returns:
     #         The response text from Claude
     #     """
-        
+
     #     # max_tokens=4000,
     #     # Create a streaming API call
     #     with self._client.messages.stream(

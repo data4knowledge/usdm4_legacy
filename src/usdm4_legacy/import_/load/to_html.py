@@ -2,6 +2,7 @@ from docling.document_converter import DocumentConverter
 from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
 
+
 class ToHTML:
     MODULE = "usdm4_legacy.import_.load.to_html.ToHTML"
 
@@ -16,5 +17,7 @@ class ToHTML:
             return result.document.export_to_html()
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "execute")
-            self._errors.exception(f"Exception raised converting document to HTML", e, location)
+            self._errors.exception(
+                f"Exception raised converting document to HTML", e, location
+            )
             return None

@@ -3,7 +3,8 @@ from usdm4_legacy.import_.load.clean_html import CleanHTML
 from usdm4_legacy.import_.load.split_html import SplitHTML
 from simple_error_log.errors import Errors
 
-class LoadPDF():
+
+class LoadPDF:
     def __init__(self, file_path: str, errors: Errors):
         self._file_path = file_path
         self._errors = errors

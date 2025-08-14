@@ -3,9 +3,13 @@ from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
 from usdm4.assembler.assembler import Assembler
 from usdm4.api.wrapper import Wrapper
-from usdm4_legacy.__info__ import __package_version__ as system_version, __system_name__ as system_name
+from usdm4_legacy.__info__ import (
+    __package_version__ as system_version,
+    __system_name__ as system_name,
+)
 
-class AssembleUSDM():
+
+class AssembleUSDM:
     MODULE = "usdm4_legacy.import_.assemble/__init__.AssembleUSDM"
 
     def __init__(self, source_data: dict, errors: Errors):
@@ -25,5 +29,4 @@ class AssembleUSDM():
                 e,
                 location,
             )
-            return {} 
-        
+            return {}
