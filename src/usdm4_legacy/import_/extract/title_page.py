@@ -6,7 +6,7 @@ from usdm4_legacy.claude.claude import Claude
 class TitlePage:
     MODULE = "usdm4_legacy.import_.extract.title_page.TitlePage"
 
-    def __init__(self, sections: list[str], errors: Errors):
+    def __init__(self, sections: list[dict], errors: Errors):
         self._sections = sections
         self._errors = errors
         self._ai = Claude(self._errors)

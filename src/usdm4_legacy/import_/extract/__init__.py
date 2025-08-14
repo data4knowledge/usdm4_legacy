@@ -41,7 +41,6 @@ class ExtractStudy:
             }
             return result
         except Exception as e:
-            print(f"Exception: {e}")
             location = KlassMethodLocation(self.MODULE, "process")
             self._errors.exception(
                 f"Exception raised extracting study data",
@@ -81,6 +80,7 @@ class ExtractStudy:
                         },
                     }
                 )
+            print(f"IDENTIFICATION: {result}")
             return result
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "_identification")
