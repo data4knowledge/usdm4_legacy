@@ -20,5 +20,5 @@ def read_yaml(full_path):
 
 
 def write_yaml(full_path, data):
-    with open(full_path, "r") as f:
+    with open(full_path, "w") as f:
         return yaml.dump(data)
