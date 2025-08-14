@@ -13,20 +13,18 @@ class LegacyImport:
     def __init__(self, file_path: str, errors: Errors):
         self._file_path = file_path
         self._errors = errors
-        self._html = None
-        self._sections = []
         usdm4 = USDM4()
         self._assembler = usdm4.assembler(errors)
 
     def process(self) -> Wrapper:
         try:
             loader = LoadPDF(self._file_path, self._errors)
-            self._sections = loader.process()
+            sections = loader.process()
             print(f"Loaded PDF")
-            extractor = ExtractStudy(self._sections, self._errors)
-            self._study = extractor.process()
+            extractor = ExtractStudy(sections, self._errors)
+            study = extractor.process()
             print(f"Extracted content")
-            assembler = AssembleUSDM(self._study, self._errors)
+            assembler = AssembleUSDM(study, self._errors)
             wrapper = assembler.process()
             print(f"Study built")
             return wrapper
