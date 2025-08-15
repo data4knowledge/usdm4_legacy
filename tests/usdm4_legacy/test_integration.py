@@ -7,11 +7,6 @@ from usdm4.api.wrapper import Wrapper
 
 SAVE = True
 
-# @pytest.fixture
-# def anyio_backend():
-#     return "asyncio"
-
-
 def _run_test(name):
     filename = f"{name}.pdf"
     filepath = _full_path(name, filename)
