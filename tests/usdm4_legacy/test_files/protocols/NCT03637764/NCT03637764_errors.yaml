@@ -1,0 +1,14 @@
+- level: Info
+  location:
+    class_name: usdm4.encoder.encoder.Encoder
+    method_name: document_status
+  message: Document status 'FINAL' decoded as 'C25508', 'Final'
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Info
+  location:
+    class_name: usdm4.encoder.encoder.Encoder
+    method_name: phase
+  message: Trial phase '1/2' decoded as 'C15693', 'Phase I/II Trial'
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
