@@ -18,16 +18,16 @@ def _run_test(name):
     result_filename = filename = f"{name}_usdm.json"
     error_filename = filename = f"{name}_errors.yaml"
     if SAVE:
-        write_json(_full_path(dir, result_filename), result)
-        write_yaml(_full_path(dir, error_filename), errors_clean_all(legacy.errors))
-    expected = read_json(_full_path(dir, result_filename))
+        write_json(_full_path(name, result_filename), result)
+        write_yaml(_full_path(name, error_filename), errors_clean_all(legacy.errors))
+    expected = read_json(_full_path(name, result_filename))
     assert pretty_result == expected
-    error_expected = read_yaml(_full_path(dir, error_filename))
+    error_expected = read_yaml(_full_path(name, error_filename))
     assert errors_clean_all(legacy.errors) == error_expected
 
 
-def _full_path(dir, filename):
-    return f"tests/usdm4_legacy/test_files/protocols/{dir}/{filename}"
+def _full_path(directory: str, filename: str) -> str:
+    return f"tests/usdm4_legacy/test_files/protocols/{directory}/{filename}"
 
 def test_nct01847274():
     _run_test("NCT01847274")
@@ -39,4 +39,4 @@ def test_nct04184622():
     _run_test("NCT04184622")
 
 def test_nct04320615():
-    _run_test("protocols/NCT04320615", "NCT04320615")
+    _run_test("NCT04320615")
