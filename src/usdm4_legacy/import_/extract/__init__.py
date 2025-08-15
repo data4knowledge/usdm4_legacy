@@ -36,8 +36,11 @@ class ExtractStudy:
                 "approval_date": tp_result["other"]["approval_date"],
                 "version": "1",  # @todo
                 "rationale": "Not set",  # @todo
-                "name": "STUDY",  # @todo
-                "label": "STUDY",  # @todo
+                "name": {
+                    "acronym": result["identification"]['titles']["acronym"], 
+                    "identifier": tp_result["sponsor"]["identifier"],
+                    "compound_code": ""
+                },
             }
             return result
         except Exception as e:
