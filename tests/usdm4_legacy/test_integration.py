@@ -1,7 +1,7 @@
 import re
 import json
-import pytest
-from tests.files.files import read_json, write_json, write_yaml, read_yaml
+from tests.usdm4_legacy.errors.errors_clean import errors_clean_all
+from tests.usdm4_legacy.files.files import read_json, write_json, write_yaml, read_yaml
 from src.usdm4_legacy import USDM4Legacy
 from usdm4.api.wrapper import Wrapper
 
@@ -10,6 +10,7 @@ SAVE = True
 # @pytest.fixture
 # def anyio_backend():
 #     return "asyncio"
+
 
 def _run_test(dir, name):
     filename = f"{name}.pdf"
@@ -25,11 +26,11 @@ def _run_test(dir, name):
     error_filename = filename = f"{name}_errors.yaml"
     if SAVE:
         write_json(_full_path(dir, result_filename), result)
-        write_yaml(_full_path(dir, error_filename), legacy.errors._items)
+        write_yaml(_full_path(dir, error_filename), errors_clean_all(legacy.errors))
     expected = read_json(_full_path(dir, result_filename))
     assert pretty_result == expected
     error_expected = read_yaml(_full_path(dir, error_filename))
-    assert legacy.errors._items == error_expected
+    assert errors_clean_all(legacy.errors) == error_expected
 
 
 def _full_path(dir, filename):

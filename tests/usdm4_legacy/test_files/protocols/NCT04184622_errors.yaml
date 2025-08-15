@@ -1,16 +1,14 @@
-- !!python/object:simple_error_log.error.Error
-  error_type: ''
-  level: 20
-  location: !!python/object:simple_error_log.error_location.KlassMethodLocation
+- level: Info
+  location:
     class_name: usdm4.encoder.encoder.Encoder
     method_name: document_status
   message: Document status 'FINAL' decoded as 'C25508', 'Final'
-  timestamp: 2025-08-14 07:32:36.553971
-- !!python/object:simple_error_log.error.Error
-  error_type: ''
-  level: 20
-  location: !!python/object:simple_error_log.error_location.KlassMethodLocation
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Info
+  location:
     class_name: usdm4.encoder.encoder.Encoder
     method_name: phase
   message: Trial phase '3' decoded as 'C15602', 'Phase III Trial'
-  timestamp: 2025-08-14 07:32:36.556538
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
