@@ -1,6 +1,6 @@
+import copy
 from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
-from usdm4 import USDM4
 from usdm4_legacy.import_.load import LoadPDF
 from usdm4_legacy.import_.extract import ExtractStudy
 from usdm4_legacy.import_.assemble import AssembleUSDM
@@ -34,5 +34,47 @@ class LegacyImport:
             return None
 
     @property
-    def source(self):
+    def source(self) -> dict:
         return self._study
+
+    @property
+    def source_no_sections(self) -> dict:
+        the_copy = copy.deepcopy(self._study)
+        the_copy["document"]["sections"] = []
+        return the_copy
+
+    @property
+    def extra(self) -> dict:
+        return {
+            "title_page": {
+                "compound_codes": "",
+                "compound_names": "",
+                "amendment_identifier": "",
+                "sponsor_confidentiality": "",
+                # Not used?
+                "amendment_details": "",
+                "amendment_identifier": "",
+                "amendment_scope": "",
+                "manufacturer_name_and_address": "",
+                "medical_expert_contact": "",
+                "original_protocol": "",
+                "regulatory_agency_identifiers": "",
+                "sae_reporting_method": "",
+                "sponsor_approval_date": "",
+                "sponsor_confidentiality": "",
+                "sponsor_name_and_address": "",
+                "sponsor_signatory": "",
+            },
+            "amendment": {
+                "amendment_details": "",
+                "robustness_impact": False,
+                "robustness_impact_reason": "",
+                "safety_impact": False,
+                "safety_impact_reason": "",
+            },
+            "miscellaneous": {
+                "medical_expert_contact": "",
+                "sae_reporting_method": "",
+                "sponsor_signatory": "",
+            },
+        }

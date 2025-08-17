@@ -31,15 +31,19 @@ class ExtractStudy:
                 "rationale": "",  # @todo
                 "trial_phase": tp_result["other"]["phase"],
             }
-            result["population"] = {"label": "Default population"}
+            result["population"] = {
+                "label": "Default population",
+                "inclusion_exclusion": {"inclusion": [], "exclusion": []},
+            }
+            result["amendments"] = {}
             result["study"] = {
                 "approval_date": tp_result["other"]["approval_date"],
                 "version": "1",  # @todo
                 "rationale": "Not set",  # @todo
                 "name": {
-                    "acronym": result["identification"]['titles']["acronym"], 
+                    "acronym": result["identification"]["titles"]["acronym"],
                     "identifier": tp_result["sponsor"]["identifier"],
-                    "compound_code": ""
+                    "compound_code": "",
                 },
             }
             return result

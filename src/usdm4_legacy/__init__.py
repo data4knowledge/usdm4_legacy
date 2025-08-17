@@ -25,18 +25,17 @@ class USDM4Legacy:
             )
             return None
 
-    # def extra(self) -> dict | None:
-    #     try:
-    #         if self._m11_import:
-    #             return self._m11_import.extra()
-    #         else:
-    #             raise RuntimeError
-    #     except Exception as e:
-    #         location = KlassMethodLocation(self.MODULE, "extra")
-    #         self._errors.exception(
-    #             "Exception raised obtaining extra information", e, location
-    #         )
-    #         return None
+    @property
+    def extra(self) -> dict:
+        return self._import.extra() if self._import else None
+
+    @property
+    def source(self) -> dict:
+        return self._import.source() if self._import else None
+
+    @property
+    def source_no_sections(self) -> dict:
+        return self._import.source_no_sections() if self._import else None
 
     @property
     def errors(self):
