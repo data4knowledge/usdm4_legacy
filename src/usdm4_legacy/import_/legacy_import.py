@@ -53,7 +53,6 @@ class LegacyImport:
                 "sponsor_confidentiality": "",
                 # Not used?
                 "amendment_details": "",
-                "amendment_identifier": "",
                 "amendment_scope": "",
                 "manufacturer_name_and_address": "",
                 "medical_expert_contact": "",
@@ -61,7 +60,6 @@ class LegacyImport:
                 "regulatory_agency_identifiers": "",
                 "sae_reporting_method": "",
                 "sponsor_approval_date": "",
-                "sponsor_confidentiality": "",
                 "sponsor_name_and_address": "",
                 "sponsor_signatory": "",
             },

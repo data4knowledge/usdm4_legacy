@@ -43,11 +43,11 @@ class Claude:
                 return json.loads(result)
             except Exception as e:
                 location = KlassMethodLocation(self.MODULE, "extract_json")
-                self._errors.exception(f"Error decoding Claude JSON", e, location)
+                self._errors.exception("Error decoding Claude JSON", e, location)
                 return None
         else:
             location = KlassMethodLocation(self.MODULE, "extract_json")
-            self._errors.error(f"Error decoding Claude response", location)
+            self._errors.error("Error decoding Claude response", location)
             return None
 
     # def system_prompt(self, content: str, system: str) -> str:

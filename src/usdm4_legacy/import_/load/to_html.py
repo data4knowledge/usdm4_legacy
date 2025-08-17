@@ -18,6 +18,6 @@ class ToHTML:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "execute")
             self._errors.exception(
-                f"Exception raised converting document to HTML", e, location
+                "Exception raised converting document to HTML", e, location
             )
             return None

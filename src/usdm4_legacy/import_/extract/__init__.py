@@ -50,7 +50,7 @@ class ExtractStudy:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "process")
             self._errors.exception(
-                f"Exception raised extracting study data",
+                "Exception raised extracting study data",
                 e,
                 location,
             )
@@ -92,7 +92,7 @@ class ExtractStudy:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "_identification")
             self._errors.exception(
-                f"Exception raised building identification data",
+                "Exception raised building identification data",
                 e,
                 location,
             )

@@ -25,7 +25,7 @@ class AssembleUSDM:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "process")
             self._errors.exception(
-                f"Exception raised assembling USDM",
+                "Exception raised assembling USDM",
                 e,
                 location,
             )

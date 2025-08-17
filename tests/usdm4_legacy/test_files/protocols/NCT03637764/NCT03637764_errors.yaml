@@ -1,3 +1,55 @@
+- level: Error
+  location:
+    class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
+    method_name: execute
+  message: "Failed during creation of identifier {\n  \"identifier\": \"NCT03637764\"\
+    ,\n  \"scope\": {\n    \"standard\": \"ct.gov\"\n  }\n}\n\nDetails\nObject of\
+    \ type Address is not JSON serializable\n\nTraceback\nTraceback (most recent call\
+    \ last):\n  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
+    , line 267, in _create_address\n    address[\"country\"]\n    ~~~~~~~^^^^^^^^^^^\n\
+    TypeError: 'Address' object is not subscriptable\n\nDuring handling of the above\
+    \ exception, another exception occurred:\n\nTraceback (most recent call last):\n\
+    \  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
+    , line 222, in execute\n    organization[\"legalAddress\"] = self._create_address(\n\
+    \                                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
+    , line 272, in _create_address\n    formated_dict = json.dumps(address, indent=2)\n\
+    \                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py\"\
+    , line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"\
+    /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
+    , line 202, in encode\n    chunks = list(chunks)\n             ^^^^^^^^^^^^\n\
+    \  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
+    , line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"\
+    /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
+    , line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__}\
+    \ '\nTypeError: Object of type Address is not JSON serializable\n"
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Error
+  location:
+    class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
+    method_name: execute
+  message: "Failed during creation of identifier {\n  \"identifier\": \"138488\",\n\
+    \  \"scope\": {\n    \"standard\": \"fda\"\n  }\n}\n\nDetails\nObject of type\
+    \ Address is not JSON serializable\n\nTraceback\nTraceback (most recent call last):\n\
+    \  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
+    , line 267, in _create_address\n    address[\"country\"]\n    ~~~~~~~^^^^^^^^^^^\n\
+    TypeError: 'Address' object is not subscriptable\n\nDuring handling of the above\
+    \ exception, another exception occurred:\n\nTraceback (most recent call last):\n\
+    \  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
+    , line 222, in execute\n    organization[\"legalAddress\"] = self._create_address(\n\
+    \                                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
+    , line 272, in _create_address\n    formated_dict = json.dumps(address, indent=2)\n\
+    \                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py\"\
+    , line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"\
+    /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
+    , line 202, in encode\n    chunks = list(chunks)\n             ^^^^^^^^^^^^\n\
+    \  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
+    , line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"\
+    /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
+    , line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__}\
+    \ '\nTypeError: Object of type Address is not JSON serializable\n"
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
 - level: Info
   location:
     class_name: usdm4.encoder.encoder.Encoder
@@ -10,5 +62,12 @@
     class_name: usdm4.encoder.encoder.Encoder
     method_name: phase
   message: Trial phase '1/2' decoded as 'C15693', 'Phase I/II Trial'
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Info
+  location:
+    class_name: usdm4.assembler.study_assembler.StudyAssembler
+    method_name: _get_study_name_label
+  message: Study name set to 'ACT15377'
   timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
   type: ''

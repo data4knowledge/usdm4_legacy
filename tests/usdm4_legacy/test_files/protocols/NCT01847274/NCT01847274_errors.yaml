@@ -12,3 +12,10 @@
   message: Trial phase '3' decoded as 'C15602', 'Phase III Trial'
   timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
   type: ''
+- level: Info
+  location:
+    class_name: usdm4.assembler.study_assembler.StudyAssembler
+    method_name: _get_study_name_label
+  message: Study name set to 'PR305011C'
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''

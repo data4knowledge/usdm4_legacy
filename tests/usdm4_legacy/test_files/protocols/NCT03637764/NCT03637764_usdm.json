@@ -1,9 +1,9 @@
 {
   "study": {
     "id": "FAKE",
-    "name": "STUDY",
+    "name": "ACT15377",
     "description": "The top-level study container",
-    "label": "STUDY",
+    "label": "ACT15377",
     "versions": [
       {
         "id": "StudyVersion_1",
@@ -21,7 +21,7 @@
             "label": null,
             "description": null,
             "type": {
-              "id": "Code_9",
+              "id": "Code_5",
               "extensionAttributes": [],
               "code": "C207598",
               "codeSystem": "http://www.cdisc.org",
@@ -35,7 +35,7 @@
                 "id": "GeographicScope_1",
                 "extensionAttributes": [],
                 "type": {
-                  "id": "Code_10",
+                  "id": "Code_6",
                   "extensionAttributes": [],
                   "code": "C68846",
                   "codeSystem": "http://www.cdisc.org",
@@ -52,7 +52,15 @@
         ],
         "amendments": [],
         "businessTherapeuticAreas": [],
-        "studyIdentifiers": [],
+        "studyIdentifiers": [
+          {
+            "id": "StudyIdentifier_1",
+            "extensionAttributes": [],
+            "text": "ACT15377",
+            "scopeId": "Organization_1",
+            "instanceType": "StudyIdentifier"
+          }
+        ],
         "referenceIdentifiers": [],
         "studyDesigns": [
           {
@@ -66,7 +74,7 @@
               "id": "AliasCode_1",
               "extensionAttributes": [],
               "standardCode": {
-                "id": "Code_16",
+                "id": "Code_12",
                 "extensionAttributes": [],
                 "code": "C15693",
                 "codeSystem": "http://www.cdisc.org",
@@ -115,7 +123,7 @@
             "instanceType": "InterventionalStudyDesign",
             "subTypes": [],
             "model": {
-              "id": "Code_15",
+              "id": "Code_11",
               "extensionAttributes": [],
               "code": "C82639",
               "codeSystem": "http://www.cdisc.org",
@@ -146,7 +154,7 @@
           {
             "id": "StudyTitle_2",
             "extensionAttributes": [],
-            "text": "ACT15377",
+            "text": "",
             "type": {
               "id": "Code_2",
               "extensionAttributes": [],
@@ -1194,7 +1202,39 @@
         ],
         "abbreviations": [],
         "roles": [],
-        "organizations": [],
+        "organizations": [
+          {
+            "id": "Organization_1",
+            "extensionAttributes": [],
+            "name": "SANOFI",
+            "label": "Sanofi",
+            "type": {
+              "id": "Code_4",
+              "extensionAttributes": [],
+              "code": "C54149",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2025-03-28",
+              "decode": "Pharmaceutical Company",
+              "instanceType": "Code"
+            },
+            "identifierScheme": "UNKNOWN",
+            "identifier": "UNKNOWN",
+            "legalAddress": {
+              "id": "Address_1",
+              "extensionAttributes": [],
+              "text": null,
+              "lines": [],
+              "city": "",
+              "district": null,
+              "state": "",
+              "postalCode": "",
+              "country": null,
+              "instanceType": "Address"
+            },
+            "managedSites": [],
+            "instanceType": "Organization"
+          }
+        ],
         "studyInterventions": [],
         "administrableProducts": [],
         "medicalDevices": [],
@@ -1216,7 +1256,7 @@
         "label": "Protocol Document",
         "description": "Protocol Document",
         "language": {
-          "id": "Code_13",
+          "id": "Code_9",
           "extensionAttributes": [],
           "code": "en",
           "codeSystem": "ISO 639-1",
@@ -1225,7 +1265,7 @@
           "instanceType": "Code"
         },
         "type": {
-          "id": "Code_14",
+          "id": "Code_10",
           "extensionAttributes": [],
           "code": "C70817",
           "codeSystem": "http://www.cdisc.org",
@@ -1240,7 +1280,7 @@
             "extensionAttributes": [],
             "version": "",
             "status": {
-              "id": "Code_12",
+              "id": "Code_8",
               "extensionAttributes": [],
               "code": "C25508",
               "codeSystem": "http://www.cdisc.org",

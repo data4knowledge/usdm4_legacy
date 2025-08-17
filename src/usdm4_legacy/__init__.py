@@ -2,7 +2,6 @@ from usdm4_legacy.import_.legacy_import import LegacyImport
 from usdm4.api.wrapper import Wrapper
 from simple_error_log.errors import Errors
 from simple_error_log.error_location import KlassMethodLocation
-from usdm4.api.wrapper import Wrapper
 
 
 class USDM4Legacy:

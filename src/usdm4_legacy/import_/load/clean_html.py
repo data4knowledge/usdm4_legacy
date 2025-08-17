@@ -20,7 +20,7 @@ class CleanHTML:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "execute")
             self._errors.exception(
-                f"Exception raised converting document to HTML", e, location
+                "Exception raised converting document to HTML", e, location
             )
             return None
 
@@ -104,7 +104,7 @@ class CleanHTML:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "_extract_toc")
             self._errors.exception(
-                f"Exception raised while attempting to extract ToC",
+                "Exception raised while attempting to extract ToC",
                 e,
                 location,
             )

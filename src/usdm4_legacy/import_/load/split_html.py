@@ -30,7 +30,7 @@ class SplitHTML:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "execute")
             self._errors.exception(
-                f"Exception raised splitting document into sections", e, location
+                "Exception raised splitting document into sections", e, location
             )
             return None
 
@@ -55,7 +55,7 @@ class SplitHTML:
                 section_info = self._parse_section_heading(heading)
                 if section_info:
                     first_numbered_heading = heading
-                    first_numbered_index = i
+                    #first_numbered_index = i
                     break
 
             # If there's content before the first numbered section, capture it
@@ -92,7 +92,7 @@ class SplitHTML:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "_extract_sections")
             self._errors.exception(
-                f"Exception raised while extracting sections",
+                "Exception raised while extracting sections",
                 e,
                 location,
             )
@@ -207,7 +207,7 @@ class SplitHTML:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "_get_section_content")
             self._errors.exception(
-                f"Exception raised while getting section content",
+                "Exception raised while getting section content",
                 e,
                 location,
             )
@@ -278,7 +278,7 @@ class SplitHTML:
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "_get_pre_section_content")
             self._errors.exception(
-                f"Exception raised while getting pre-section content",
+                "Exception raised while getting pre-section content",
                 e,
                 location,
             )
@@ -306,7 +306,7 @@ class SplitHTML:
             return result
         except Exception as e:
             self._errors.exception(
-                f"Parsing HTML with soup",
+                "Parsing HTML with soup",
                 e,
                 KlassMethodLocation(self.MODULE, "_get_soup"),
             )

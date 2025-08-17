@@ -1,9 +1,9 @@
 {
   "study": {
     "id": "FAKE",
-    "name": "STUDY",
+    "name": "PR305011C",
     "description": "The top-level study container",
-    "label": "STUDY",
+    "label": "PR-30-5011-C",
     "versions": [
       {
         "id": "StudyVersion_1",
@@ -52,7 +52,29 @@
         ],
         "amendments": [],
         "businessTherapeuticAreas": [],
-        "studyIdentifiers": [],
+        "studyIdentifiers": [
+          {
+            "id": "StudyIdentifier_1",
+            "extensionAttributes": [],
+            "text": "",
+            "scopeId": "Organization_1",
+            "instanceType": "StudyIdentifier"
+          },
+          {
+            "id": "StudyIdentifier_2",
+            "extensionAttributes": [],
+            "text": "100,996",
+            "scopeId": "Organization_2",
+            "instanceType": "StudyIdentifier"
+          },
+          {
+            "id": "StudyIdentifier_3",
+            "extensionAttributes": [],
+            "text": "PR-30-5011-C",
+            "scopeId": "Organization_3",
+            "instanceType": "StudyIdentifier"
+          }
+        ],
         "referenceIdentifiers": [],
         "studyDesigns": [
           {
@@ -1075,7 +1097,132 @@
         ],
         "abbreviations": [],
         "roles": [],
-        "organizations": [],
+        "organizations": [
+          {
+            "id": "Organization_1",
+            "extensionAttributes": [],
+            "name": "CLINICALTRIALS.GOV",
+            "label": "ClinicalTrials.gov",
+            "type": {
+              "id": "Code_5",
+              "extensionAttributes": [],
+              "code": "C93453",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2024-09-27",
+              "decode": "Clinical Study Registry",
+              "instanceType": "Code"
+            },
+            "identifierScheme": "National Institute of Health, US Government",
+            "identifier": "ClinicalTrials.gov",
+            "legalAddress": {
+              "id": "Address_1",
+              "extensionAttributes": [],
+              "text": null,
+              "lines": [
+                "National Library of Medicine",
+                "8600 Rockville Pike"
+              ],
+              "city": "Bethesda",
+              "district": "",
+              "state": "MD",
+              "postalCode": "20894",
+              "country": {
+                "id": "Code_4",
+                "extensionAttributes": [],
+                "code": "USA",
+                "codeSystem": "ISO 3166 1 alpha3",
+                "codeSystemVersion": "2020-08",
+                "decode": "United States of America",
+                "instanceType": "Code"
+              },
+              "instanceType": "Address"
+            },
+            "managedSites": [],
+            "instanceType": "Organization"
+          },
+          {
+            "id": "Organization_2",
+            "extensionAttributes": [],
+            "name": "FOOD-AND-DRUG-ADMIONISTRATION",
+            "label": "Food and Drug Admionistration",
+            "type": {
+              "id": "Code_7",
+              "extensionAttributes": [],
+              "code": "C188863",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2024-09-27",
+              "decode": "Regulatory Agency",
+              "instanceType": "Code"
+            },
+            "identifierScheme": "Health and Human Services, US Government",
+            "identifier": "FDA",
+            "legalAddress": {
+              "id": "Address_2",
+              "extensionAttributes": [],
+              "text": null,
+              "lines": [
+                "10903 New Hampshire Ave"
+              ],
+              "city": "Silver Spring",
+              "district": "",
+              "state": "MD",
+              "postalCode": "20903",
+              "country": {
+                "id": "Code_6",
+                "extensionAttributes": [],
+                "code": "USA",
+                "codeSystem": "ISO 3166 1 alpha3",
+                "codeSystemVersion": "2020-08",
+                "decode": "United States of America",
+                "instanceType": "Code"
+              },
+              "instanceType": "Address"
+            },
+            "managedSites": [],
+            "instanceType": "Organization"
+          },
+          {
+            "id": "Organization_3",
+            "extensionAttributes": [],
+            "name": "TESARO,-INC.",
+            "label": "TESARO, Inc.",
+            "type": {
+              "id": "Code_9",
+              "extensionAttributes": [],
+              "code": "C54149",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2025-03-28",
+              "decode": "Pharmaceutical Company",
+              "instanceType": "Code"
+            },
+            "identifierScheme": "UNKNOWN",
+            "identifier": "UNKNOWN",
+            "legalAddress": {
+              "id": "Address_3",
+              "extensionAttributes": [],
+              "text": null,
+              "lines": [
+                "1000 Winter Street, Suite 3300"
+              ],
+              "city": "Waltham",
+              "district": null,
+              "state": "MA",
+              "postalCode": "02451",
+              "country": {
+                "id": "Code_8",
+                "extensionAttributes": [],
+                "code": "USA",
+                "codeSystem": "ISO 3166 1 alpha3",
+                "codeSystemVersion": "2020-08",
+                "decode": "United States of America",
+                "instanceType": "Code"
+              },
+              "instanceType": "Address"
+            },
+            "managedSites": [],
+            "instanceType": "Organization"
+          }
+        ],
         "studyInterventions": [],
         "administrableProducts": [],
         "medicalDevices": [],
