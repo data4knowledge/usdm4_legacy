@@ -1,5 +1,29 @@
 - level: Info
   location:
+    class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
+    method_name: _create_address
+  message: Address set to National Library of Medicine, 8600 Rockville Pike, Bethesda,
+    MD, 20894, United States of America
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Info
+  location:
+    class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
+    method_name: _create_address
+  message: Address set to 10903 New Hampshire Ave, Silver Spring, MD, 20903, United
+    States of America
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Info
+  location:
+    class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
+    method_name: _create_address
+  message: Address set to 1000 Winter Street, Suite 3300, Waltham, MA, 02451, United
+    States of America
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Info
+  location:
     class_name: usdm4.encoder.encoder.Encoder
     method_name: document_status
   message: Document status 'FINAL' decoded as 'C25508', 'Final'

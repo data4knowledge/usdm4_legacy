@@ -26,15 +26,15 @@ class USDM4Legacy:
 
     @property
     def extra(self) -> dict:
-        return self._import.extra() if self._import else None
+        return self._import.extra if self._import else None
 
     @property
     def source(self) -> dict:
-        return self._import.source() if self._import else None
+        return self._import.source if self._import else None
 
     @property
     def source_no_sections(self) -> dict:
-        return self._import.source_no_sections() if self._import else None
+        return self._import.source_no_sections if self._import else None
 
     @property
     def errors(self):

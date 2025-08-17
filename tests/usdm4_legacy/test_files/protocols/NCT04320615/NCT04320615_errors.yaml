@@ -1,53 +1,74 @@
 - level: Error
   location:
     class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
-    method_name: execute
-  message: "Failed during creation of identifier {\n  \"identifier\": \"NCT04320615\"\
-    ,\n  \"scope\": {\n    \"standard\": \"ct.gov\"\n  }\n}\n\nDetails\nObject of\
-    \ type Address is not JSON serializable\n\nTraceback\nTraceback (most recent call\
-    \ last):\n  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
-    , line 267, in _create_address\n    address[\"country\"]\n    ~~~~~~~^^^^^^^^^^^\n\
-    TypeError: 'Address' object is not subscriptable\n\nDuring handling of the above\
-    \ exception, another exception occurred:\n\nTraceback (most recent call last):\n\
-    \  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
-    , line 222, in execute\n    organization[\"legalAddress\"] = self._create_address(\n\
-    \                                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
-    , line 272, in _create_address\n    formated_dict = json.dumps(address, indent=2)\n\
-    \                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py\"\
-    , line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"\
-    /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
-    , line 202, in encode\n    chunks = list(chunks)\n             ^^^^^^^^^^^^\n\
-    \  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
-    , line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"\
-    /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
-    , line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__}\
-    \ '\nTypeError: Object of type Address is not JSON serializable\n"
+    method_name: _create_organization
+  message: "Failed during creation of organization\n\nDetails\nunhashable type: 'Code'\n\
+    \nTraceback\nTraceback (most recent call last):\n  File \"/Users/daveih/Documents/python/usdm4/src/usdm4/assembler/identification_assembler.py\"\
+    , line 287, in _create_organization\n    self.ORG_CODES[org_type][\"code\"], self.ORG_CODES[org_type][\"\
+    decode\"]\n    ~~~~~~~~~~~~~~^^^^^^^^^^\nTypeError: unhashable type: 'Code'\n"
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Error
+  location: {}
+  message: 'Failed to create organization {''type'': Code(id=''Code_5'', extensionAttributes=[],
+    code=''C93453'', codeSystem=''http://www.cdisc.org'', codeSystemVersion=''2024-09-27'',
+    decode=''Clinical Study Registry'', instanceType=''Code''), ''name'': ''CLINICALTRIALS.GOV'',
+    ''label'': ''ClinicalTrials.gov'', ''description'': ''The US clinical trials registry'',
+    ''identifier'': ''ClinicalTrials.gov'', ''identifierScheme'': ''National Institute
+    of Health, US Government'', ''legalAddress'': None, ''id'': ''Organization_1'',
+    ''instanceType'': ''Organization''}
+
+
+    Details
+
+    usdm4.assembler.identification_assembler.IdentificationAssembler.execute
+
+
+    Traceback
+
+    NoneType: None
+
+    '
   timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
   type: ''
 - level: Error
   location:
     class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
-    method_name: execute
-  message: "Failed during creation of identifier {\n  \"identifier\": \"148225\",\n\
-    \  \"scope\": {\n    \"standard\": \"fda\"\n  }\n}\n\nDetails\nObject of type\
-    \ Address is not JSON serializable\n\nTraceback\nTraceback (most recent call last):\n\
-    \  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
-    , line 267, in _create_address\n    address[\"country\"]\n    ~~~~~~~^^^^^^^^^^^\n\
-    TypeError: 'Address' object is not subscriptable\n\nDuring handling of the above\
-    \ exception, another exception occurred:\n\nTraceback (most recent call last):\n\
-    \  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
-    , line 222, in execute\n    organization[\"legalAddress\"] = self._create_address(\n\
-    \                                   ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/daveih/Documents/github/usdm4/src/usdm4/assembler/identification_assembler.py\"\
-    , line 272, in _create_address\n    formated_dict = json.dumps(address, indent=2)\n\
-    \                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py\"\
-    , line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"\
-    /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
-    , line 202, in encode\n    chunks = list(chunks)\n             ^^^^^^^^^^^^\n\
-    \  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
-    , line 439, in _iterencode\n    o = _default(o)\n        ^^^^^^^^^^^\n  File \"\
-    /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\"\
-    , line 180, in default\n    raise TypeError(f'Object of type {o.__class__.__name__}\
-    \ '\nTypeError: Object of type Address is not JSON serializable\n"
+    method_name: _create_organization
+  message: "Failed during creation of organization\n\nDetails\nunhashable type: 'Code'\n\
+    \nTraceback\nTraceback (most recent call last):\n  File \"/Users/daveih/Documents/python/usdm4/src/usdm4/assembler/identification_assembler.py\"\
+    , line 287, in _create_organization\n    self.ORG_CODES[org_type][\"code\"], self.ORG_CODES[org_type][\"\
+    decode\"]\n    ~~~~~~~~~~~~~~^^^^^^^^^^\nTypeError: unhashable type: 'Code'\n"
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Error
+  location: {}
+  message: 'Failed to create organization {''type'': Code(id=''Code_7'', extensionAttributes=[],
+    code=''C188863'', codeSystem=''http://www.cdisc.org'', codeSystemVersion=''2024-09-27'',
+    decode=''Regulatory Agency'', instanceType=''Code''), ''name'': ''FOOD-AND-DRUG-ADMIONISTRATION'',
+    ''label'': ''Food and Drug Admionistration'', ''identifier'': ''FDA'', ''description'':
+    ''The US medicines regulator'', ''identifierScheme'': ''Health and Human Services,
+    US Government'', ''legalAddress'': None, ''id'': ''Organization_2'', ''instanceType'':
+    ''Organization''}
+
+
+    Details
+
+    usdm4.assembler.identification_assembler.IdentificationAssembler.execute
+
+
+    Traceback
+
+    NoneType: None
+
+    '
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Info
+  location:
+    class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
+    method_name: _create_address
+  message: Address set to Basel, Switzerland
   timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
   type: ''
 - level: Info

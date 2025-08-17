@@ -1,9 +1,9 @@
 {
   "study": {
-    "id": "f8be9860-c0a1-465f-9e44-538918cc5b58",
-    "name": "STUDY",
+    "id": "812a728d-10ce-4799-8211-ec106bb3a4bc",
+    "name": "SURMOUNT1",
     "description": "The top-level study container",
-    "label": "STUDY",
+    "label": "SURMOUNT-1",
     "versions": [
       {
         "id": "StudyVersion_1",
@@ -52,7 +52,29 @@
         ],
         "amendments": [],
         "businessTherapeuticAreas": [],
-        "studyIdentifiers": [],
+        "studyIdentifiers": [
+          {
+            "id": "StudyIdentifier_1",
+            "extensionAttributes": [],
+            "text": "NCT04184622",
+            "scopeId": "Organization_1",
+            "instanceType": "StudyIdentifier"
+          },
+          {
+            "id": "StudyIdentifier_2",
+            "extensionAttributes": [],
+            "text": "139721",
+            "scopeId": "Organization_2",
+            "instanceType": "StudyIdentifier"
+          },
+          {
+            "id": "StudyIdentifier_3",
+            "extensionAttributes": [],
+            "text": "I8F-MC-GPHK(b)",
+            "scopeId": "Organization_3",
+            "instanceType": "StudyIdentifier"
+          }
+        ],
         "referenceIdentifiers": [],
         "studyDesigns": [
           {
@@ -131,7 +153,7 @@
           {
             "id": "StudyTitle_1",
             "extensionAttributes": [],
-            "text": "Efficacy and Safety of Tirzepatide Once Weekly in Participants without Type 2 Diabetes Who Have Obesity or are Overweight with WeightRelated Comorbidities: A Randomized, Double-Blind, Placebo-Controlled Trial (SURMOUNT-1)",
+            "text": "Efficacy and Safety of Tirzepatide Once Weekly in Participants without Type 2 Diabetes Who Have Obesity or are Overweight with Weight-Related Comorbidities: A Randomized, Double-Blind, Placebo-Controlled Trial (SURMOUNT-1)",
             "type": {
               "id": "Code_1",
               "extensionAttributes": [],
@@ -1370,13 +1392,136 @@
             "id": "NarrativeContentItem_171",
             "extensionAttributes": [],
             "name": "NCI-170",
-            "text": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Adams TD, Davidson LE, Litwin SE, Kim J, Kolotkin RL, Nanjee MN, Gutierrez JM, Frogley SJ, Ibele AR, Brinton EA, Hopkins PN, McKinlay RM., Simper SC, Hunt SC. Weight and metabolic outcomes 12 years after gastric bypass. N Engl J Med. 2017;377(12):1143-1155.</p><p>Allison DB, Downey M, Atkinson RL, Billington CJ, Bray GA, Eckel RH, Finkelstein EA, Jensen MD, Tremblay A . Obesity as a disease:  a white paper on evidence and arguments commissioned by the Council of The Obesity Society . Obesity (Silver Spring). 2008;16(6):1161-1177.</p><p>American Diabetes Association. In Standards of Medical Care in Diabetes-2019. Glycemic Targets:  Standards of Medical Care in Diabetes-2019 . Diabetes Care . 2019a;42(suppl 1):S61S70.</p><p>American Diabetes Association. In Standards of Medical Care in Diabetes-2019.  Classification and Diagnosis of Diabetes: Standards of Medical Care in Diabetes-2019.  Diabetes Care 2019b; 42(suppl 1): S 13-S28.</p><p>[AMA] American Medical Association. American Medical Association House of Delegates Resolution:  420 (A-13) Recognition of Obesity as a Disease, 2013 pp 1-7.  Available at: https://www.npr.org/documents/2013/jun/ama-resolution-obesity.pdf  Accessed August 30, 2019.</p><ul>\n<li>Aroda VR, Ratner R. The safety and tolerability of GLP-1 receptor agonists in the treatment of type 2 diabetes:  a review. Diabetes Metab Res Rev . 2011;27(6):528-542.</li>\n</ul><p>Baggio LL, Drucker DJ. Biology of incretins:  GLP-1 and GIP. Gastroenterol. 2007;132(6):2131-2157.</p><p>Banks PA, Freeman ML; Practice Parameters Committee of the American College of Gastroenterology. Practice guidelines in acute pancreatitis. Am J Gastroenterol. 2006;101(10):2379-2400.</p><p>Coskun T, Sloop KW, Loghin C, Alsina-Fernandez J, Urva S, Bokvist KB, Cui X, Briere DA, Cabrera O, Roell WC, Kuchibhotla U, Moyers JS, Benson CT, Gimeno RE, D'Alessio DA, Haupt A. LY3298176, a novel dual GIP and GLP-1 receptor agonist for the treatment of type 2 diabetes mellitus:  From discovery to clinical proof of concept. Mol Metab . 2018;18:3-14.</p><p>Council on Science and Public Health. Report of the Council on Science and Public Health. Is obesity a disease? (Resolution 115-A-12). Council on Science and Public Health. Report number:  3-A-13, 2013.</p><p>Danne T, Philotheou A, Goldman D, Guo X, Ping L, Cali A, Johnston P. A randomized trial comparing the rate of hypoglycemia - assessed using continuous glucose monitoring - in 125 preschool children with type 1 diabetes treated with insulin glargine or NPH insulin (the PRESCHOOL study). Pediatr Diabetes . 2013;14(8):593-601. Erratum in: Pediatr Diabetes . 2015;16(6):462.</p><p>Dolan P. Modeling valuations for EuroQol Health States. Medical Care 1997; 35(11):1095-1108.</p><p>Dombrowski SU, Knittle K, Avenell A, Ara\u00fajo-Soares V, Sniehotta FF. Long term maintenance of weight loss with non-surgical interventions in obese adults: systematic review and meta-analyses of randomized controlled trials. BMJ. 2014;348:g2646.</p><ul>\n<li>[EMA] European Medicines Agency.  Guideline on clinical evaluation of medicinal products used in weight management.  Committee for Medicinal Products for Human Use.  June 2016. http://www.ema.europa.eu/docs/en_GB/document_library/Scientific_guideline/2016/07/WC50 0209942.pdf  Accessed November 19, 2018.</li>\n<li>EuroQoL Group. EQ-5D-5L User guide: basic information on how to use the EQ-5D-5L instrument. Version 2.1. Available at: https://euroqol.org/wp-content/uploads/2016/09/EQ-5D-5L_UserGuide_2015.pdf. Published April 2015. Accessed January 22, 2019.</li>\n<li>FAO/WHO/UNU. Human energy requirements. Report of a joint FAO/WHO/UNU expert , Pogosova N, Raubenheimer PJ, Shaw JE, Sheu WHH, Temelkova-Kurktschiev T, for the REWIMNDconsultation. FAO: food and nutrition technical report series 1. Rome: FAO/WHO/UNU;2004.</li>\n<li>[FDA] Food and Drug Administration. Guidance for Industry. Developing products for weight management.  February 2007. Available at: https://www.fda.gov/downloads/Drugs/Guidances/ucm071612.pdf. Accessed November 19, 2018.</li>\n<li>Frias JP, Nauck MA, Van J, Kutner ME, Cui X, Benson C, Urva S, Gimeno RE, Milicevic Z, Robins D, Haupt A. Efficacy and safety of LY3298176, a novel dual GIP and GLP-1 receptor agonist, in patients with type 2 diabetes:  a randomised, placebo-controlled and active comparator-controlled phase 2 trial. Lancet. 2018;392(10160):2180-2193.</li>\n<li>Gerstein HC, Colhoun HM, Dagenais GR, Diaz R, Lakshmanan M, Pais P, Pobstfield J, Riesmeyer JS, Riddle MC, Ryden L, Xavier D, Atisso CM, Dyal L, Hall S, Rao-Melacini P, Wong G, Avezum A, Basile J, Chung N, Conget I, Cushman WC, Franek E, Hancu N, Hanefeld M, Holt S, Jansky P, Keltai M, Lanas F, Leiter LA, Lopez-Jaramillo P, Munoz EGC, Pirags V, Pogosova N, Raubenheimer PJ, Shaw JE, Sheu WH-H, Temelkova-Kurktschiev T, for the REWIND Investigators. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomized placebo-controlled trial. Lancet 2019;394(10193):121-130.</li>\n</ul><p>Jensen MD, Ryan DH, Donato KA, Aprovian, CM, Arrd, JD, Comuzzie AG, Hu FB, Hubbard VS, Jakicic JM, Kushner RF, Loria CM, Millen BE, Nonas CA, Pi-Sunyer FX, Stevens J, Stevens VJ, Wadden TA, Wolfe BM, Uanovski SZ. Executive summary:  guidelines (2013) for the management of overweight and obesity in adults:  a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines and the Obesity Society published by the Obesity Society and American College of Cardiology/American Heart Association Task Force on Practice Guidelines. Based on a systematic review from the Obesity Expert Panel, 2013. Obesity. 2014;22:(suppl 2):S5-S39.</p><p>Knowler WC, Barrett-Connor E, Fowler SE, Hamman RF, Lachin JM, Walker EA, Nathan DM; Diabetes Prevention Program Research Group. Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. N Engl J Med. 2002;346(6):393-403.</p><table><tbody><tr><td>Koizumi M, Takada T, Kawarada Y, Hirata K, Mayumi T, Yoshida M, Sekimoto M, Hirota M, Kimura Y, Takeda K, Isaji S, Otsuki M, Matsuno S; JPN. JPN Guidelines for the management of acute pancreatitis: diagnostic criteria for acute pancreatitis. J Hepatobiliary Pancreat Surg . 2006;13(1):25-32.</td></tr><tr><td>Kolotkin RL, Ervin CM, Meincke HH, Hojbjerre L, Fehnel SE. Development of a clinical trials version of the Impact of Weight on Quality of Life-Lite questionnaire (IWQoL-Lite Clinical Trials Version): results from two qualitative studies. Clin Obes. 2017;7(5):290-299.</td></tr><tr><td>Kolotkin RL, Williams V, Ervin, CM, Meincke HH, Qin S, Smith LvH, Fehnel SE. Validation of a new measure of quality of life in obesity trials: IWQOL - Lite Clinical Trials Version. Poster presented at: Obesity Week 2018; November 13, 2018; Nashville, TN.</td></tr><tr><td>Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-616.</td></tr><tr><td>le Roux CW, Astrup A, Fujioka K, Greenway F, Lau DCW, Van Gaal L, Ortiz RV, Wilding JPH, Skjoth TV, Manning LS, Pi-Sunyer X for the SCALE Obesity Prediabetes NN8022-1839 Study Group. 3 years of liraglutide versus placebo for type 2 diabetes risk reduction and weight management in individuals with prediabetes: a randomized, double-blind trial. Lancet. 2017;389(10077):1399-1409.</td></tr><tr><td>Li G, Zhang P, Wang J, An Y, Gong Q, Gregg EW, Yang W, Zhang B, Shuai Y, Hong J, Engelgau MM, Li H, Roglic G, Hu Y, Bennett PH. Cardiovascular mortality, all-cause mortality, and diabetes incidence after lifestyle intervention for people with impaired glucose tolerance in the Da Qing Diabetes Prevention Study: a 23-year follow-up study. Lancet Diabetes Endocrinol. 2014;2(6):474-480.</td></tr><tr><td>Luppino FS, de Wit LM, Bouvy PF, Stijnen T, Cuijpers P, Penninx BW, Zitman FG. Overweight, obesity, and depression: a systematic review and meta-analysis of longitudinal studies. Arch Gen Psychiatry. 2010;67(3):220-229.</td></tr><tr><td>Marso SP, Daniels GH, Brown-Frandsen K, Kirstensen P, Mann JFE, Nauck MA, Nissen SE, Pocock S, Poulter NR, Tavn LS, Steinberg WM, Stockner M, Zinman B, Bergenstal RM, Buse JB. For the LEADER Steering Committee. Liraglutide and cardiovascular outcomes in type 2 diabetes. N Engl J Med 2016a; 375:311-322.</td></tr><tr><td>Marso SP, Bain SC, Consoli A, Eliaschewitz FG, Jodar E, Leiter LA, Lingvay I, Rosenstock J, Seufert J, Warren M, Woo V, Hansen O, Holst AG, Pettersson J, Vilsboll T, for the SUSTAIN-6 Investigators. Semaglutide and cardiovascular outcomes in patients with type 2 diabetes. N Engl J Med 2016b; 375:1834-1844.</td></tr><tr><td>Maruish ME, ed. User's manual for the SF-36v2 Health Survey. 3rd ed. Lincoln, RI: Quality Metric Incorporated; 2011.</td></tr><tr><td>Mertens IL, Van Gaal LF. Overweight, obesity, and blood pressure: the effects of modest weight reduction. Obes Res. 2000;8(3):270-278.</td></tr><tr><td>Nauck MA, Meier JJ, Schmidt WE. Incretin-based glucose-lowering medications and the risk of acute pancreatitis and/or pancreatic cancer: Reassuring data from cardio-vascular outcome trials. Diabetes Obes Metab . 2017;19(9):1327-1328.</td></tr></tbody></table><p>SAXENDA\u00ae [EMA summary of product characteristics (SmPC)]. Novo Nordisk, Bagsvaerd, Denmark. Available at:</p><p>https://ec.europa.eu/health/documents/community-register/2015/20150323131125/anx_13112 5_en.pdf.  Accessed April 10, 2019.</p><ul>\n<li>SAXENDA\u00ae [package insert] Novo Nordisk, Bagsvaerd, Denmark. Available at: https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/206321Orig1s000lbl.pdf. Accessed March 2, 2019.</li>\n<li>Skow MA, Bergmann, NC, Knop FK. Diabetes and obesity treatment based on dual incretin receptor activation: 'twincretins'. Diabetes Obes Metab. 2016;18(9):847-854.</li>\n</ul><p>Steinberg WM, Buse JB, Ghorbani MLM, \u00d8rsted DD, Nauck MA; LEADER Steering Committee; LEADER Trial Investigators. Amylase, lipase, and acute pancreatitis in people with type 2 diabetes treated with liraglutide:  results from the LEADER Randomized Trial. Diabetes Care. 2017a;40(7):966-972.</p><p>Steinberg WM, Rosenstock J, Wadden TA, Donsmark M, Jensen CB, DeVries JH. Impact of liraglutide on amylase, lipase, and acute pancreatitis in participants with overweight/obesity and normoglycemia, prediabetes, or type 2 diabetes:  secondary analyses of pooled data from the SCALE clinical development program. Diabetes Care. 2017b;40(7):839-848.</p><ul>\n<li>Tomlinson B, Hu M, Zhang Y, Chan P, Liu ZM. An overview of new GLP-1 receptor agonists for type 2 diabetes. Expert Opin Investig Drugs . 2016;25(2):145-158.</li>\n<li>van Bloemendaal L, Ten Kulve JS, la Fleur SE, Ijzerman RG, Diamant M. Effects of glucagon-like peptide 1 on appetite and body weight:  focus on the CNS. J Endocrinol . 2014;221(1):T1-T16.</li>\n<li>Warkentin LM, Das D, Majumdar SR, Johnson JA, Padwal RS. The effect of weight loss on health-related quality of life:  systematic review and meta-analysis of randomized trials . Obes Rev. 2014;15(3):169-182.</li>\n<li>Weinberg ME, Bacchetti P, Rushakoff RJ. Frequently repeated glucose measurements overestimate the incidence of inpatient hypoglycemia and severe hyperglycemia. J Diabetes Sci Technol . 2010;4(3):577-582.</li>\n</ul><p>Leo Document ID = 8dd79a8d-d134-4b80-afb3-6ce848a2570c</p><pre><code>Approver: Approval Date &amp; Time: 01-Oct-2021 16:14:59 GMT Signature meaning: Approved Approver: Approval Date &amp; Time: 04-Oct-2021 15:48:26 GMT 33D 33D</code></pre><p>Signature meaning: Approved</p></div>",
+            "text": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Adams TD, Davidson LE, Litwin SE, Kim J, Kolotkin RL, Nanjee MN, Gutierrez JM, Frogley SJ, Ibele AR, Brinton EA, Hopkins PN, McKinlay RM., Simper SC, Hunt SC. Weight and metabolic outcomes 12 years after gastric bypass. N Engl J Med. 2017;377(12):1143-1155.</p><p>Allison DB, Downey M, Atkinson RL, Billington CJ, Bray GA, Eckel RH, Finkelstein EA, Jensen MD, Tremblay A . Obesity as a disease:  a white paper on evidence and arguments commissioned by the Council of The Obesity Society . Obesity (Silver Spring). 2008;16(6):1161-1177.</p><p>American Diabetes Association. In Standards of Medical Care in Diabetes-2019. Glycemic Targets:  Standards of Medical Care in Diabetes-2019 . Diabetes Care . 2019a;42(suppl 1):S61S70.</p><p>American Diabetes Association. In Standards of Medical Care in Diabetes-2019.  Classification and Diagnosis of Diabetes: Standards of Medical Care in Diabetes-2019.  Diabetes Care 2019b; 42(suppl 1): S 13-S28.</p><p>[AMA] American Medical Association. American Medical Association House of Delegates Resolution:  420 (A-13) Recognition of Obesity as a Disease, 2013 pp 1-7.  Available at: https://www.npr.org/documents/2013/jun/ama-resolution-obesity.pdf  Accessed August 30, 2019.</p><ul>\n<li>Aroda VR, Ratner R. The safety and tolerability of GLP-1 receptor agonists in the treatment of type 2 diabetes:  a review. Diabetes Metab Res Rev . 2011;27(6):528-542.</li>\n</ul><p>Baggio LL, Drucker DJ. Biology of incretins:  GLP-1 and GIP. Gastroenterol. 2007;132(6):2131-2157.</p><p>Banks PA, Freeman ML; Practice Parameters Committee of the American College of Gastroenterology. Practice guidelines in acute pancreatitis. Am J Gastroenterol. 2006;101(10):2379-2400.</p><p>Coskun T, Sloop KW, Loghin C, Alsina-Fernandez J, Urva S, Bokvist KB, Cui X, Briere DA, Cabrera O, Roell WC, Kuchibhotla U, Moyers JS, Benson CT, Gimeno RE, D'Alessio DA, Haupt A. LY3298176, a novel dual GIP and GLP-1 receptor agonist for the treatment of type 2 diabetes mellitus:  From discovery to clinical proof of concept. Mol Metab . 2018;18:3-14.</p><p>Council on Science and Public Health. Report of the Council on Science and Public Health. Is obesity a disease? (Resolution 115-A-12). Council on Science and Public Health. Report number:  3-A-13, 2013.</p><p>Danne T, Philotheou A, Goldman D, Guo X, Ping L, Cali A, Johnston P. A randomized trial comparing the rate of hypoglycemia - assessed using continuous glucose monitoring - in 125 preschool children with type 1 diabetes treated with insulin glargine or NPH insulin (the PRESCHOOL study). Pediatr Diabetes . 2013;14(8):593-601. Erratum in: Pediatr Diabetes . 2015;16(6):462.</p><p>Dolan P. Modeling valuations for EuroQol Health States. Medical Care 1997; 35(11):1095-1108.</p><p>Dombrowski SU, Knittle K, Avenell A, Ara\u00fajo-Soares V, Sniehotta FF. Long term maintenance of weight loss with non-surgical interventions in obese adults: systematic review and meta-analyses of randomized controlled trials. BMJ. 2014;348:g2646.</p><ul>\n<li>[EMA] European Medicines Agency.  Guideline on clinical evaluation of medicinal products used in weight management.  Committee for Medicinal Products for Human Use.  June 2016. http://www.ema.europa.eu/docs/en_GB/document_library/Scientific_guideline/2016/07/WC50 0209942.pdf  Accessed November 19, 2018.</li>\n<li>EuroQoL Group. EQ-5D-5L User guide: basic information on how to use the EQ-5D-5L instrument. Version 2.1. Available at: https://euroqol.org/wp-content/uploads/2016/09/EQ-5D-5L_UserGuide_2015.pdf. Published April 2015. Accessed January 22, 2019.</li>\n<li>FAO/WHO/UNU. Human energy requirements. Report of a joint FAO/WHO/UNU expert , Pogosova N, Raubenheimer PJ, Shaw JE, Sheu WHH, Temelkova-Kurktschiev T, for the REWIMNDconsultation. FAO: food and nutrition technical report series 1. Rome: FAO/WHO/UNU;2004.</li>\n<li>[FDA] Food and Drug Administration. Guidance for Industry. Developing products for weight management.  February 2007. Available at: https://www.fda.gov/downloads/Drugs/Guidances/ucm071612.pdf. Accessed November 19, 2018.</li>\n<li>Frias JP, Nauck MA, Van J, Kutner ME, Cui X, Benson C, Urva S, Gimeno RE, Milicevic Z, Robins D, Haupt A. Efficacy and safety of LY3298176, a novel dual GIP and GLP-1 receptor agonist, in patients with type 2 diabetes:  a randomised, placebo-controlled and active comparator-controlled phase 2 trial. Lancet. 2018;392(10160):2180-2193.</li>\n<li>Gerstein HC, Colhoun HM, Dagenais GR, Diaz R, Lakshmanan M, Pais P, Pobstfield J, Riesmeyer JS, Riddle MC, Ryden L, Xavier D, Atisso CM, Dyal L, Hall S, Rao-Melacini P, Wong G, Avezum A, Basile J, Chung N, Conget I, Cushman WC, Franek E, Hancu N, Hanefeld M, Holt S, Jansky P, Keltai M, Lanas F, Leiter LA, Lopez-Jaramillo P, Munoz EGC, Pirags V, Pogosova N, Raubenheimer PJ, Shaw JE, Sheu WH-H, Temelkova-Kurktschiev T, for the REWIND Investigators. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomized placebo-controlled trial. Lancet 2019;394(10193):121-130.</li>\n</ul><p>Jensen MD, Ryan DH, Donato KA, Aprovian, CM, Arrd, JD, Comuzzie AG, Hu FB, Hubbard VS, Jakicic JM, Kushner RF, Loria CM, Millen BE, Nonas CA, Pi-Sunyer FX, Stevens J, Stevens VJ, Wadden TA, Wolfe BM, Uanovski SZ. Executive summary:  guidelines (2013) for the management of overweight and obesity in adults:  a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines and the Obesity Society published by the Obesity Society and American College of Cardiology/American Heart Association Task Force on Practice Guidelines. Based on a systematic review from the Obesity Expert Panel, 2013. Obesity. 2014;22:(suppl 2):S5-S39.</p><p>Knowler WC, Barrett-Connor E, Fowler SE, Hamman RF, Lachin JM, Walker EA, Nathan DM; Diabetes Prevention Program Research Group. Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. N Engl J Med. 2002;346(6):393-403.</p><table><tbody><tr><td>Koizumi M, Takada T, Kawarada Y, Hirata K, Mayumi T, Yoshida M, Sekimoto M, Hirota M, Kimura Y, Takeda K, Isaji S, Otsuki M, Matsuno S; JPN. JPN Guidelines for the management of acute pancreatitis: diagnostic criteria for acute pancreatitis. J Hepatobiliary Pancreat Surg . 2006;13(1):25-32.</td></tr><tr><td>Kolotkin RL, Ervin CM, Meincke HH, Hojbjerre L, Fehnel SE. Development of a clinical trials version of the Impact of Weight on Quality of Life-Lite questionnaire (IWQoL-Lite Clinical Trials Version): results from two qualitative studies. Clin Obes. 2017;7(5):290-299.</td></tr><tr><td>Kolotkin RL, Williams V, Ervin, CM, Meincke HH, Qin S, Smith LvH, Fehnel SE. Validation of a new measure of quality of life in obesity trials: IWQOL - Lite Clinical Trials Version. Poster presented at: Obesity Week 2018; November 13, 2018; Nashville, TN.</td></tr><tr><td>Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-616.</td></tr><tr><td>le Roux CW, Astrup A, Fujioka K, Greenway F, Lau DCW, Van Gaal L, Ortiz RV, Wilding JPH, Skjoth TV, Manning LS, Pi-Sunyer X for the SCALE Obesity Prediabetes NN8022-1839 Study Group. 3 years of liraglutide versus placebo for type 2 diabetes risk reduction and weight management in individuals with prediabetes: a randomized, double-blind trial. Lancet. 2017;389(10077):1399-1409.</td></tr><tr><td>Li G, Zhang P, Wang J, An Y, Gong Q, Gregg EW, Yang W, Zhang B, Shuai Y, Hong J, Engelgau MM, Li H, Roglic G, Hu Y, Bennett PH. Cardiovascular mortality, all-cause mortality, and diabetes incidence after lifestyle intervention for people with impaired glucose tolerance in the Da Qing Diabetes Prevention Study: a 23-year follow-up study. Lancet Diabetes Endocrinol. 2014;2(6):474-480.</td></tr><tr><td>Luppino FS, de Wit LM, Bouvy PF, Stijnen T, Cuijpers P, Penninx BW, Zitman FG. Overweight, obesity, and depression: a systematic review and meta-analysis of longitudinal studies. Arch Gen Psychiatry. 2010;67(3):220-229.</td></tr><tr><td>Marso SP, Daniels GH, Brown-Frandsen K, Kirstensen P, Mann JFE, Nauck MA, Nissen SE, Pocock S, Poulter NR, Tavn LS, Steinberg WM, Stockner M, Zinman B, Bergenstal RM, Buse JB. For the LEADER Steering Committee. Liraglutide and cardiovascular outcomes in type 2 diabetes. N Engl J Med 2016a; 375:311-322.</td></tr><tr><td>Marso SP, Bain SC, Consoli A, Eliaschewitz FG, Jodar E, Leiter LA, Lingvay I, Rosenstock J, Seufert J, Warren M, Woo V, Hansen O, Holst AG, Pettersson J, Vilsboll T, for the SUSTAIN-6 Investigators. Semaglutide and cardiovascular outcomes in patients with type 2 diabetes. N Engl J Med 2016b; 375:1834-1844.</td></tr><tr><td>Maruish ME, ed. User's manual for the SF-36v2 Health Survey. 3rd ed. Lincoln, RI: Quality Metric Incorporated; 2011.</td></tr><tr><td>Mertens IL, Van Gaal LF. Overweight, obesity, and blood pressure: the effects of modest weight reduction. Obes Res. 2000;8(3):270-278.</td></tr><tr><td>Nauck MA, Meier JJ, Schmidt WE. Incretin-based glucose-lowering medications and the risk of acute pancreatitis and/or pancreatic cancer: Reassuring data from cardio-vascular outcome trials. Diabetes Obes Metab . 2017;19(9):1327-1328.</td></tr></tbody></table><p>SAXENDA\u00ae [EMA summary of product characteristics (SmPC)]. Novo Nordisk, Bagsvaerd, Denmark. Available at:</p><p>https://ec.europa.eu/health/documents/community-register/2015/20150323131125/anx_13112 5_en.pdf.  Accessed April 10, 2019.</p><ul>\n<li>SAXENDA\u00ae [package insert] Novo Nordisk, Bagsvaerd, Denmark. Available at: https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/206321Orig1s000lbl.pdf. Accessed March 2, 2019.</li>\n<li>Skow MA, Bergmann, NC, Knop FK. Diabetes and obesity treatment based on dual incretin receptor activation: 'twincretins'. Diabetes Obes Metab. 2016;18(9):847-854.</li>\n</ul><p>Steinberg WM, Buse JB, Ghorbani MLM, \u00d8rsted DD, Nauck MA; LEADER Steering Committee; LEADER Trial Investigators. Amylase, lipase, and acute pancreatitis in people with type 2 diabetes treated with liraglutide:  results from the LEADER Randomized Trial. Diabetes Care. 2017a;40(7):966-972.</p><p>Steinberg WM, Rosenstock J, Wadden TA, Donsmark M, Jensen CB, DeVries JH. Impact of liraglutide on amylase, lipase, and acute pancreatitis in participants with overweight/obesity and normoglycemia, prediabetes, or type 2 diabetes:  secondary analyses of pooled data from the SCALE clinical development program. Diabetes Care. 2017b;40(7):839-848.</p><ul>\n<li>Tomlinson B, Hu M, Zhang Y, Chan P, Liu ZM. An overview of new GLP-1 receptor agonists for type 2 diabetes. Expert Opin Investig Drugs . 2016;25(2):145-158.</li>\n<li>van Bloemendaal L, Ten Kulve JS, la Fleur SE, Ijzerman RG, Diamant M. Effects of glucagon-like peptide 1 on appetite and body weight:  focus on the CNS. J Endocrinol . 2014;221(1):T1-T16.</li>\n<li>Warkentin LM, Das D, Majumdar SR, Johnson JA, Padwal RS. The effect of weight loss on health-related quality of life:  systematic review and meta-analysis of randomized trials . Obes Rev. 2014;15(3):169-182.</li>\n<li>Weinberg ME, Bacchetti P, Rushakoff RJ. Frequently repeated glucose measurements overestimate the incidence of inpatient hypoglycemia and severe hyperglycemia. J Diabetes Sci Technol . 2010;4(3):577-582.</li>\n</ul><p>Leo Document ID = FAKE</p><pre><code>Approver: Approval Date &amp; Time: 01-Oct-2021 16:14:59 GMT Signature meaning: Approved Approver: Approval Date &amp; Time: 04-Oct-2021 15:48:26 GMT 33D 33D</code></pre><p>Signature meaning: Approved</p></div>",
             "instanceType": "NarrativeContentItem"
           }
         ],
         "abbreviations": [],
         "roles": [],
-        "organizations": [],
+        "organizations": [
+          {
+            "id": "Organization_1",
+            "extensionAttributes": [],
+            "name": "CLINICALTRIALS.GOV",
+            "label": "ClinicalTrials.gov",
+            "type": {
+              "id": "Code_5",
+              "extensionAttributes": [],
+              "code": "C93453",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2024-09-27",
+              "decode": "Clinical Study Registry",
+              "instanceType": "Code"
+            },
+            "identifierScheme": "National Institute of Health, US Government",
+            "identifier": "ClinicalTrials.gov",
+            "legalAddress": {
+              "id": "Address_1",
+              "extensionAttributes": [],
+              "text": "National Library of Medicine, 8600 Rockville Pike, Bethesda, MD, 20894, United States of America",
+              "lines": [
+                "National Library of Medicine",
+                "8600 Rockville Pike"
+              ],
+              "city": "Bethesda",
+              "district": "",
+              "state": "MD",
+              "postalCode": "20894",
+              "country": {
+                "id": "Code_4",
+                "extensionAttributes": [],
+                "code": "USA",
+                "codeSystem": "ISO 3166 1 alpha3",
+                "codeSystemVersion": "2020-08",
+                "decode": "United States of America",
+                "instanceType": "Code"
+              },
+              "instanceType": "Address"
+            },
+            "managedSites": [],
+            "instanceType": "Organization"
+          },
+          {
+            "id": "Organization_2",
+            "extensionAttributes": [],
+            "name": "FOOD-AND-DRUG-ADMIONISTRATION",
+            "label": "Food and Drug Admionistration",
+            "type": {
+              "id": "Code_7",
+              "extensionAttributes": [],
+              "code": "C188863",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2024-09-27",
+              "decode": "Regulatory Agency",
+              "instanceType": "Code"
+            },
+            "identifierScheme": "Health and Human Services, US Government",
+            "identifier": "FDA",
+            "legalAddress": {
+              "id": "Address_2",
+              "extensionAttributes": [],
+              "text": "10903 New Hampshire Ave, Silver Spring, MD, 20903, United States of America",
+              "lines": [
+                "10903 New Hampshire Ave"
+              ],
+              "city": "Silver Spring",
+              "district": "",
+              "state": "MD",
+              "postalCode": "20903",
+              "country": {
+                "id": "Code_6",
+                "extensionAttributes": [],
+                "code": "USA",
+                "codeSystem": "ISO 3166 1 alpha3",
+                "codeSystemVersion": "2020-08",
+                "decode": "United States of America",
+                "instanceType": "Code"
+              },
+              "instanceType": "Address"
+            },
+            "managedSites": [],
+            "instanceType": "Organization"
+          },
+          {
+            "id": "Organization_3",
+            "extensionAttributes": [],
+            "name": "ELI-LILLY-AND-COMPANY",
+            "label": "Eli Lilly and Company",
+            "type": {
+              "id": "Code_9",
+              "extensionAttributes": [],
+              "code": "C54149",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2025-03-28",
+              "decode": "Pharmaceutical Company",
+              "instanceType": "Code"
+            },
+            "identifierScheme": "UNKNOWN",
+            "identifier": "UNKNOWN",
+            "legalAddress": {
+              "id": "Address_3",
+              "extensionAttributes": [],
+              "text": "Indianapolis, Indiana, 46285, United States of America",
+              "lines": [],
+              "city": "Indianapolis",
+              "district": null,
+              "state": "Indiana",
+              "postalCode": "46285",
+              "country": {
+                "id": "Code_8",
+                "extensionAttributes": [],
+                "code": "USA",
+                "codeSystem": "ISO 3166 1 alpha3",
+                "codeSystemVersion": "2020-08",
+                "decode": "United States of America",
+                "instanceType": "Code"
+              },
+              "instanceType": "Address"
+            },
+            "managedSites": [],
+            "instanceType": "Organization"
+          }
+        ],
         "studyInterventions": [],
         "administrableProducts": [],
         "medicalDevices": [],

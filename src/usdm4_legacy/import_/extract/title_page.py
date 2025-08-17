@@ -56,6 +56,7 @@ class TitlePage:
                             - The state or region placed into a "state" field
                             - The country returned in a "country" field as a ISO 3166 country code
                             - Any other data returned as lines as an array in a "lines" field
+                        - If a field is not found, set the field value to an empty string
 
                 - a section called "other":
                     - The trial phase placed into the field "phase"

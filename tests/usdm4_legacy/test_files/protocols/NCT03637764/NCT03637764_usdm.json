@@ -1222,7 +1222,7 @@
             "legalAddress": {
               "id": "Address_1",
               "extensionAttributes": [],
-              "text": null,
+              "text": "",
               "lines": [],
               "city": "",
               "district": null,

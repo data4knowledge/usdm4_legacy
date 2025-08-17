@@ -1117,7 +1117,7 @@
             "legalAddress": {
               "id": "Address_1",
               "extensionAttributes": [],
-              "text": null,
+              "text": "National Library of Medicine, 8600 Rockville Pike, Bethesda, MD, 20894, United States of America",
               "lines": [
                 "National Library of Medicine",
                 "8600 Rockville Pike"
@@ -1159,7 +1159,7 @@
             "legalAddress": {
               "id": "Address_2",
               "extensionAttributes": [],
-              "text": null,
+              "text": "10903 New Hampshire Ave, Silver Spring, MD, 20903, United States of America",
               "lines": [
                 "10903 New Hampshire Ave"
               ],
@@ -1200,7 +1200,7 @@
             "legalAddress": {
               "id": "Address_3",
               "extensionAttributes": [],
-              "text": null,
+              "text": "1000 Winter Street, Suite 3300, Waltham, MA, 02451, United States of America",
               "lines": [
                 "1000 Winter Street, Suite 3300"
               ],

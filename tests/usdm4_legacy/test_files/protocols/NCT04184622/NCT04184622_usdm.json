@@ -1404,7 +1404,7 @@
             "legalAddress": {
               "id": "Address_1",
               "extensionAttributes": [],
-              "text": null,
+              "text": "Indianapolis, Indiana, 46285, United States of America",
               "lines": [],
               "city": "Indianapolis",
               "district": null,

@@ -11,7 +11,7 @@ from src.usdm4_legacy import USDM4Legacy
 from usdm4.api.wrapper import Wrapper
 from usdm4 import USDM4
 
-SAVE = False
+SAVE = True
 
 
 def _run_test(name):
@@ -20,7 +20,7 @@ def _run_test(name):
     legacy = USDM4Legacy()
     wrapper: Wrapper = legacy.from_pdf(filepath)
     print(f"ERRORS: {legacy.errors.dump(0)}")
-    print(f"SOURCE: {legacy.source}")
+    print(f"SOURCE: {legacy.source_no_sections}")
     result = wrapper.to_json()
     result = replace_uuid(result)
     pretty_result = json.dumps(json.loads(result), indent=2)
