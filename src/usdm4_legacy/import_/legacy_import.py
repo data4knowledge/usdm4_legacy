@@ -13,20 +13,16 @@ class LegacyImport:
     def __init__(self, file_path: str, errors: Errors):
         self._file_path = file_path
         self._errors = errors
-        usdm4 = USDM4()
-        self._assembler = usdm4.assembler(errors)
+        self._study = None
 
     def process(self) -> Wrapper:
         try:
             loader = LoadPDF(self._file_path, self._errors)
             sections = loader.process()
-            print(f"Loaded PDF")
             extractor = ExtractStudy(sections, self._errors)
-            study = extractor.process()
-            print(f"Extracted content")
-            assembler = AssembleUSDM(study, self._errors)
+            self._study = extractor.process()
+            assembler = AssembleUSDM(self._study, self._errors)
             wrapper = assembler.process()
-            print(f"Study built")
             return wrapper
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "process")
@@ -37,9 +33,6 @@ class LegacyImport:
             )
             return None
 
-    # def extra(self):
-    #     return {
-    #         "title_page": self._title_page.extra(),
-    #         "miscellaneous": self._miscellaneous.extra(),
-    #         "amendment": self._amendment.extra(),
-    #     }
+    @property
+    def source(self):
+        return self._study

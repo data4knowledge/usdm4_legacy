@@ -13,6 +13,7 @@ def _run_test(name):
     filepath = _full_path(name, filename)
     legacy = USDM4Legacy()
     wrapper: Wrapper = legacy.from_pdf(filepath)
+    print(f"ERRORS: {legacy.errors.dump(0)}")
     result = wrapper.to_json()
     result = replace_uuid(result)
     pretty_result = json.dumps(json.loads(result), indent=2)
