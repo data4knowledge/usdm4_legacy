@@ -82,10 +82,10 @@ class ExtractStudy:
                                 "label": tp["sponsor"]["label"],
                                 "identifier": "UNKNOWN",
                                 "identifierScheme": "UNKNOWN",
-                                "legalAddress": tp["sponsor"]["legalAddress"],
+                                "legalAddress": self._validate_address_field(tp["sponsor"]["legalAddress"])
                             }
-                        },
-                    }
+                        }
+                    },
                 )
             print(f"IDENTIFICATION: {result}")
             return result
@@ -97,3 +97,10 @@ class ExtractStudy:
                 location,
             )
             return {}
+
+    def _validate_address_field(self, address: dict) -> dict:
+        result = {}
+        result["lines"] = address["lines"] if "lines" in address else []
+        for field in ["city", "district", "state", "postalCode", "country"]:
+            result[field] = address[field] if field in address else ""
+        return result
