@@ -49,7 +49,7 @@ class SplitHTML:
 
             # Find the first numbered section heading
             first_numbered_heading = None
-            first_numbered_index = -1
+            #first_numbered_index = -1
 
             for i, heading in enumerate(headings):
                 section_info = self._parse_section_heading(heading)

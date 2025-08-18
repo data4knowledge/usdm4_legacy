@@ -82,9 +82,11 @@ class ExtractStudy:
                                 "label": tp["sponsor"]["label"],
                                 "identifier": "UNKNOWN",
                                 "identifierScheme": "UNKNOWN",
-                                "legalAddress": self._validate_address_field(tp["sponsor"]["legalAddress"])
+                                "legalAddress": self._validate_address_field(
+                                    tp["sponsor"]["legalAddress"]
+                                ),
                             }
-                        }
+                        },
                     },
                 )
             print(f"IDENTIFICATION: {result}")
