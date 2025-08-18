@@ -1202,10 +1202,11 @@
               "extensionAttributes": [],
               "text": "1000 Winter Street, Suite 3300, Waltham, MA, 02451, United States of America",
               "lines": [
-                "1000 Winter Street, Suite 3300"
+                "1000 Winter Street",
+                "Suite 3300"
               ],
               "city": "Waltham",
-              "district": null,
+              "district": "",
               "state": "MA",
               "postalCode": "02451",
               "country": {
