@@ -11,7 +11,7 @@ from src.usdm4_legacy import USDM4Legacy
 from usdm4.api.wrapper import Wrapper
 from usdm4 import USDM4
 
-SAVE = True
+SAVE = False
 
 
 def _run_test(name):
