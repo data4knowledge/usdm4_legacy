@@ -24,7 +24,7 @@ class ExtractStudy:
                     "template": "Legacy",
                     "version_date": tp_result["other"]["approval_date"],
                 },
-                "sections": self._sections,
+                "sections": None,
             }
             result["study_design"] = {
                 "label": "Study Design 1",
@@ -37,7 +37,7 @@ class ExtractStudy:
             }
             result["amendments"] = {}
             result["study"] = {
-                "approval_date": tp_result["other"]["approval_date"],
+                "sponsor_approval_date": tp_result["other"]["approval_date"],
                 "version": "1",  # @todo
                 "rationale": "Not set",  # @todo
                 "name": {
@@ -46,6 +46,8 @@ class ExtractStudy:
                     "compound_code": "",
                 },
             }
+            print(f"RESULT: {result}")
+            result["document"]["sections"] = self._sections
             return result
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "process")
@@ -68,6 +70,10 @@ class ExtractStudy:
                         }
                     )
             if "sponsor" in tp:
+                label = tp["sponsor"]["label"].strip()
+                name = label.upper().replace(" ", "-")
+                name = name if name else "SPONSOR"
+                label = label if label else "Sponsor"
                 result["identifiers"].append(
                     {
                         "identifier": tp["sponsor"]["identifier"],
