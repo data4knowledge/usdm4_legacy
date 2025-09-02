@@ -67,5 +67,4 @@ class TitlePage:
             """
         prompt_result = self._ai.prompt(prompt)
         result = self._ai.extract_json(prompt_result)
-        print(f"TRIAL INFO RESULT: {result}")
         return result

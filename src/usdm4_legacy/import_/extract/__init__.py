@@ -58,7 +58,6 @@ class ExtractStudy:
 
     def _identification(self, tp: dict) -> dict:
         try:
-            print(f"\n\nTP: {tp}\n\n")
             result = {"titles": tp["titles"], "identifiers": []}
             for org in ["ct.gov", "fda"]:
                 if org in tp:
@@ -89,7 +88,6 @@ class ExtractStudy:
                         },
                     },
                 )
-            print(f"IDENTIFICATION: {result}")
             return result
         except Exception as e:
             location = KlassMethodLocation(self.MODULE, "_identification")
