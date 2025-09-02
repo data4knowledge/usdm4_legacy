@@ -15,6 +15,41 @@
         ],
         "dateValues": [
           {
+            "id": "GovernanceDate_2",
+            "extensionAttributes": [],
+            "name": "SPONSOR-APPORVAL-DATE",
+            "label": null,
+            "description": null,
+            "type": {
+              "id": "Code_16",
+              "extensionAttributes": [],
+              "code": "C132352",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2024-09-27",
+              "decode": "Protocol Approval by Sponsor Date",
+              "instanceType": "Code"
+            },
+            "dateValue": "2020-11-23",
+            "geographicScopes": [
+              {
+                "id": "GeographicScope_2",
+                "extensionAttributes": [],
+                "type": {
+                  "id": "Code_17",
+                  "extensionAttributes": [],
+                  "code": "C68846",
+                  "codeSystem": "http://www.cdisc.org",
+                  "codeSystemVersion": "2024-09-27",
+                  "decode": "Global",
+                  "instanceType": "Code"
+                },
+                "code": null,
+                "instanceType": "GeographicScope"
+              }
+            ],
+            "instanceType": "GovernanceDate"
+          },
+          {
             "id": "GovernanceDate_1",
             "extensionAttributes": [],
             "name": "PROTOCOL-DATE",
@@ -88,7 +123,7 @@
               "id": "AliasCode_1",
               "extensionAttributes": [],
               "standardCode": {
-                "id": "Code_16",
+                "id": "Code_15",
                 "extensionAttributes": [],
                 "code": "C15693",
                 "codeSystem": "http://www.cdisc.org",
@@ -137,7 +172,7 @@
             "instanceType": "InterventionalStudyDesign",
             "subTypes": [],
             "model": {
-              "id": "Code_15",
+              "id": "Code_14",
               "extensionAttributes": [],
               "code": "C82639",
               "codeSystem": "http://www.cdisc.org",
@@ -1353,7 +1388,7 @@
         "label": "Protocol Document",
         "description": "Protocol Document",
         "language": {
-          "id": "Code_13",
+          "id": "Code_12",
           "extensionAttributes": [],
           "code": "en",
           "codeSystem": "ISO 639-1",
@@ -1362,7 +1397,7 @@
           "instanceType": "Code"
         },
         "type": {
-          "id": "Code_14",
+          "id": "Code_13",
           "extensionAttributes": [],
           "code": "C70817",
           "codeSystem": "http://www.cdisc.org",
@@ -1377,7 +1412,7 @@
             "extensionAttributes": [],
             "version": "",
             "status": {
-              "id": "Code_12",
+              "id": "Code_11",
               "extensionAttributes": [],
               "code": "C25508",
               "codeSystem": "http://www.cdisc.org",
