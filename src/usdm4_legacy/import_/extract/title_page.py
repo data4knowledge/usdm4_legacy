@@ -20,7 +20,7 @@ class TitlePage:
             else:
                 text += self._sections[index]["text"]
             index += 1
-            if index > 10:
+            if index > 3:
                 break
         prompt = f"""
             from the html below
