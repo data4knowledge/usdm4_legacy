@@ -87,7 +87,15 @@
         ],
         "amendments": [],
         "businessTherapeuticAreas": [],
-        "studyIdentifiers": [],
+        "studyIdentifiers": [
+          {
+            "id": "StudyIdentifier_1",
+            "extensionAttributes": [],
+            "text": "ACT15377",
+            "scopeId": "Organization_1",
+            "instanceType": "StudyIdentifier"
+          }
+        ],
         "referenceIdentifiers": [],
         "studyDesigns": [
           {
@@ -1229,7 +1237,39 @@
         ],
         "abbreviations": [],
         "roles": [],
-        "organizations": [],
+        "organizations": [
+          {
+            "id": "Organization_1",
+            "extensionAttributes": [],
+            "name": "SANOFI",
+            "label": "Sanofi",
+            "type": {
+              "id": "Code_4",
+              "extensionAttributes": [],
+              "code": "C54149",
+              "codeSystem": "http://www.cdisc.org",
+              "codeSystemVersion": "2025-03-28",
+              "decode": "Pharmaceutical Company",
+              "instanceType": "Code"
+            },
+            "identifierScheme": "UNKNOWN",
+            "identifier": "UNKNOWN",
+            "legalAddress": {
+              "id": "Address_1",
+              "extensionAttributes": [],
+              "text": "",
+              "lines": [],
+              "city": "",
+              "district": "",
+              "state": "",
+              "postalCode": "",
+              "country": null,
+              "instanceType": "Address"
+            },
+            "managedSites": [],
+            "instanceType": "Organization"
+          }
+        ],
         "studyInterventions": [],
         "administrableProducts": [],
         "medicalDevices": [],
@@ -3487,5 +3527,5 @@
   },
   "usdmVersion": "4.0.0",
   "systemName": "USDM4 Legacy Protocol Package",
-  "systemVersion": "0.1.0-alpha.2"
+  "systemVersion": "0.1.0-alpha.3"
 }
