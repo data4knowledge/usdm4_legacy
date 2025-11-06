@@ -1,17 +1,67 @@
-- level: Info
+- level: Error
   location:
     class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
-    method_name: _create_address
-  message: Address set to National Library of Medicine, 8600 Rockville Pike, Bethesda,
-    MD, 20894, United States of America
+    method_name: _create_organization
+  message: "Failed during creation of organization\n\nDetails\nunhashable type: 'Code'\n\
+    \nTraceback\nTraceback (most recent call last):\n  usdm4/assembler/identification_assembler.py,\
+    \ line 282, in _create_organization\n    self.ORG_CODES[org_type][\"code\"], self.ORG_CODES[org_type][\"\
+    decode\"]\n    ~~~~~~~~~~~~~~^^^^^^^^^^\nTypeError: unhashable type: 'Code'\n"
   timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
   type: ''
-- level: Info
+- level: Error
+  location: {}
+  message: 'Failed to create organization {''type'': Code(id=''Code_5'', extensionAttributes=[],
+    code=''C93453'', codeSystem=''http://www.cdisc.org'', codeSystemVersion=''2024-09-27'',
+    decode=''Clinical Study Registry'', instanceType=''Code''), ''name'': ''CLINICALTRIALS.GOV'',
+    ''label'': ''ClinicalTrials.gov'', ''description'': ''The US clinical trials registry'',
+    ''identifier'': ''ClinicalTrials.gov'', ''identifierScheme'': ''National Institute
+    of Health, US Government'', ''legalAddress'': None, ''id'': ''Organization_1'',
+    ''instanceType'': ''Organization''}
+
+
+    Details
+
+    usdm4.assembler.identification_assembler.IdentificationAssembler.execute
+
+
+    Traceback
+
+    NoneType: None
+
+    '
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Error
   location:
     class_name: usdm4.assembler.identification_assembler.IdentificationAssembler
-    method_name: _create_address
-  message: Address set to 10903 New Hampshire Ave, Silver Spring, MD, 20903, United
-    States of America
+    method_name: _create_organization
+  message: "Failed during creation of organization\n\nDetails\nunhashable type: 'Code'\n\
+    \nTraceback\nTraceback (most recent call last):\n  usdm4/assembler/identification_assembler.py,\
+    \ line 282, in _create_organization\n    self.ORG_CODES[org_type][\"code\"], self.ORG_CODES[org_type][\"\
+    decode\"]\n    ~~~~~~~~~~~~~~^^^^^^^^^^\nTypeError: unhashable type: 'Code'\n"
+  timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
+  type: ''
+- level: Error
+  location: {}
+  message: 'Failed to create organization {''type'': Code(id=''Code_7'', extensionAttributes=[],
+    code=''C188863'', codeSystem=''http://www.cdisc.org'', codeSystemVersion=''2024-09-27'',
+    decode=''Regulatory Agency'', instanceType=''Code''), ''name'': ''FOOD-AND-DRUG-ADMIONISTRATION'',
+    ''label'': ''Food and Drug Admionistration'', ''identifier'': ''FDA'', ''description'':
+    ''The US medicines regulator'', ''identifierScheme'': ''Health and Human Services,
+    US Government'', ''legalAddress'': None, ''id'': ''Organization_2'', ''instanceType'':
+    ''Organization''}
+
+
+    Details
+
+    usdm4.assembler.identification_assembler.IdentificationAssembler.execute
+
+
+    Traceback
+
+    NoneType: None
+
+    '
   timestamp: YYYY-MM-DD HH:MM:SS.nnnnnn
   type: ''
 - level: Info
